@@ -93,7 +93,7 @@ export default function Nav() {
 
     return (
         <nav id="hide-header" className="lg:px-[6rem] px-5 bg-black">
-            <div className="mx-auto flex items-center justify-between py-1">
+            <div className="mx-auto flex items-center justify-between py-2">
                 <div className="inline-flex items-center space-x-2">
                     <div className="flex justify-center h-[4.3rem]">
                         <img src={logo} alt="nav-logo"></img>
