@@ -1,0 +1,69 @@
+/* Navbar scroll up and down */
+
+#hide-header {
+    filter: drop-shadow(0 -10px 20px #685a33);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+    transition: all 300ms ease-in-out;
+}
+
+/* Navbar item styling */
+
+#navItems::after {
+    content: "";
+    pointer-events: none;
+    bottom: -5px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2.5px;
+    background: linear-gradient(to right, #f5ac0fd7, #26073bd7);
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
+}
+
+#navItems:hover::after,
+#navItems.active::after {
+    width: 100%;
+    left: 0%;
+}
+
+#navItems.active {
+    font-weight: bold;
+}
+
+/* menu icon styling */
+
+.burger {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.burger span {
+    display: block;
+    width: 25px;
+    height: 2.5px;
+    background: #1c0d29;
+    margin: 6px 0;
+    transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55), opacity 0.3s ease;
+}
+
+#burger-checkbox {
+    display: none;
+}
+
+#burger-checkbox:checked+.burger span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+#burger-checkbox:checked+.burger span:nth-child(2) {
+    opacity: 0;
+    transform: translateX(-20px);
+}
+
+#burger-checkbox:checked+.burger span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}

@@ -1,0 +1,75 @@
+/* read more button */
+.read-button {
+    background: #ddd;
+    border-radius: 7px;
+    box-shadow: 8px 8px 15px 5px #1e040073;
+    padding: 10px 40px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+    color: #222;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.read-button:hover {
+    box-shadow: none;
+    opacity: 80%;
+}
+
+/* contact now button */
+
+.btn-con {
+    box-sizing: border-box;
+    border: 0;
+    color: #fff;
+    padding: 1em 1.8em;
+    background: linear-gradient(140.14deg, #ec540e 15.05%, #d6361f 114.99%) padding-box,
+        linear-gradient(142.51deg, #ff9465 8.65%, #af1905 88.82%) border-box;
+    border-radius: 7px;
+    display: flex;
+    transition: all 0.5s ease-in-out;
+    align-items: center;
+    gap: 0.6em;
+    font-weight: bold;
+}
+
+.btn-con .arrow-wrapper-con {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-con .arrow-con {
+    margin-top: 1px;
+    width: 10px;
+    height: 2px;
+    position: relative;
+    transition: 0.2s;
+}
+
+.btn-con .arrow-con::before {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    top: -3px;
+    right: 3px;
+    transition: 0.2s;
+    padding: 3px;
+    transform: rotate(-45deg);
+}
+
+.btn-con:hover {
+    background: #111;
+}
+
+.btn-con:hover .arrow-con {
+    background: #fff;
+}
+
+.btn-con:hover .arrow-con:before {
+    right: 0;
+}
