@@ -94,7 +94,7 @@ const CourseSection = () => (
         </div>
 
         <div className="flex justify-center mt-[7rem]">
-            <button className="hover:brightness-110 font-bold py-3 px-6 rounded-xl bg-gradient-to-l from-orange-300 to-orange-600 text-white">More Courses {'>'} </button>
+            <button className="hover:brightness-110 font-bold py-3 px-6 rounded-xl bg-gradient-to-l from-orange-300 to-orange-600 text-white">More Courses </button>
         </div>
     </section>
 );
