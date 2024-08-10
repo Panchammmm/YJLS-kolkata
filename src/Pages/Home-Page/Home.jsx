@@ -7,6 +7,7 @@ import WhyUs from "./why-Us/WhyUs";
 import PhotoGallery from "./Photo/PhotoGallery";
 import CourseSection from "./Courses/CourseSection";
 import Review from "./Reviews/Review";
+import Program from "./Program/Program";
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
       <img class="bg-style" src={background} alt="Background Image" />
       <Hero />
       <CourseSection />
+      <Program />
       <WhyUs />
       <PhotoGallery />
       <Review />
