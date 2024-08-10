@@ -42,19 +42,19 @@ function Hero() {
 
 function StatsSection() {
     const stats = [
-        { icon: <FaGraduationCap size={40} />, number: '200 +', label: 'HAPPY STUDENTS' },
-        { icon: <FaUsers size={40} />, number: '50 +', label: '5 Stars Rating' },
-        { icon: <FaChalkboardTeacher size={40} />, number: '20 +', label: 'jlpt Courses' },
-        { icon: <FaBook size={40} />, number: '100 +', label: 'Lecture Classes' },
+        { icon: <FaGraduationCap size={38} />, number: '200 +', label: 'HAPPY STUDENTS' },
+        { icon: <FaUsers size={38} />, number: '50 +', label: '5 Stars Rating' },
+        { icon: <FaChalkboardTeacher size={38} />, number: '20 +', label: 'jlpt Courses' },
+        { icon: <FaBook size={38} />, number: '100 +', label: 'Lecture Classes' },
     ];
 
     return (
-        <div className="bg-black text-white pt-[5rem] pb-16">
+        <div className="bg-black text-white pt-[5rem] pb-16 px-[20vw]">
             <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 text-center">
                 {stats.map((stat, index) => (
                     <div key={index} className="flex flex-col items-center">
                         <div className="text-[#ffc876] mb-4">{stat.icon}</div>
-                        <div className="text-2xl font-bold">{stat.number}</div>
+                        <div className="text-xl font-bold">{stat.number}</div>
                         <div className="text-sm mt-2 uppercase">{stat.label}</div>
                     </div>
                 ))}

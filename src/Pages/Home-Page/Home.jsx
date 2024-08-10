@@ -3,12 +3,20 @@ import "./home.css";
 import background from "../../assets/site-bg1.jpg";
 
 import Hero from "./Hero-Section/Hero";
+import WhyUs from "./why-Us/WhyUs";
+import PhotoGallery from "./Photo/PhotoGallery";
+import CourseSection from "./Courses/CourseSection";
 
 const Home = () => {
   return (
     <section id="Home">
+
       <img class="bg-style" src={background} alt="Background Image" />
       <Hero />
+      <CourseSection />
+      <WhyUs />
+      <PhotoGallery />
+
     </section>
   );
 };
