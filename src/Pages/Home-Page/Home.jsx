@@ -6,6 +6,7 @@ import Hero from "./Hero-Section/Hero";
 import WhyUs from "./why-Us/WhyUs";
 import PhotoGallery from "./Photo/PhotoGallery";
 import CourseSection from "./Courses/CourseSection";
+import Review from "./Reviews/Review";
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
       <CourseSection />
       <WhyUs />
       <PhotoGallery />
+      <Review />
 
     </section>
   );

@@ -30,16 +30,16 @@ body {
 /* Scrollbar Styles */
 
 ::-webkit-scrollbar {
-    width: 8px;
+    width: 5px;
 }
 
 ::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: black;
 }
 
 ::-webkit-scrollbar-thumb {
     background: #ffb443;
-    border-radius: 8px;
+    border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {

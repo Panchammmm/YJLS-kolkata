@@ -25,8 +25,8 @@ const WhyUs = () => {
   return (
     <div className="max-w-5xl mx-auto pt-[120px] pb-[140px]">
       <div>
-        <h1 className="text-3xl font-bold text-center mb-4 capitalize">why choose us</h1>
-        <p className="text-center text-gray-600 mb-8">At Yume Japanese Language School, we focus on your success by offering top-notch training. From expert faculty to the latest resources, discover why we’re the best choice for mastering Japanese.</p>
+        <h1 className="text-3xl font-bold text-center mb-4">Why we are the <span className="text-yellow-500">Best!</span></h1>
+        <p className="text-center text-gray-600 mb-8 px-[8vw]">At Yume Japanese Language School, we focus on your success by offering top-notch training. From expert faculty to the latest resources, discover why we’re the best choice for mastering Japanese.</p>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mt-10 justify-center items-center">

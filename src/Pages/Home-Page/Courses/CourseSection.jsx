@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaArrowRight } from 'react-icons/fa';
 
 import C1 from "../../../assets/Courses/course1.jpg";
 import C2 from "../../../assets/Courses/course2.jpg";
@@ -80,7 +81,7 @@ const CourseSection = () => (
     <section className="bg-gray-100 pt-[120px] pb-[110px]">
         <div>
             <h1 className="text-3xl font-bold text-center mb-4 capitalize">Popular Courses</h1>
-            <p className="text-center text-gray-600 mb-8">
+            <p className="text-center text-gray-600 mb-8 px-[25vw]">
                 At Yume Japanese Language School, we focus on your success by offering top-notch
                 training. From expert faculty to the latest resources.
             </p>
@@ -94,7 +95,10 @@ const CourseSection = () => (
         </div>
 
         <div className="flex justify-center mt-[7rem]">
-            <button className="hover:brightness-110 font-bold py-3 px-6 rounded-xl bg-gradient-to-l from-orange-300 to-orange-600 text-white">More Courses </button>
+            <button className="group hover:brightness-110 font-bold py-3 px-6 rounded-xl bg-gradient-to-r from-orange-300 to-orange-600 text-white flex items-center justify-center transition-all duration-300">
+                More Courses
+                <FaArrowRight className="ml-2 transition-transform transform group-hover:translate-x-2 duration-300" />
+            </button>
         </div>
     </section>
 );

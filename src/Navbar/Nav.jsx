@@ -41,8 +41,8 @@ export default function Nav() {
 
     useEffect(() => {
         const mainHeader = document.getElementById("hide-header");
-        const sections = document.querySelectorAll('section');
-        const navLinks = document.querySelectorAll('nav a');
+        // const sections = document.querySelectorAll('section');
+        // const navLinks = document.querySelectorAll('nav a');
 
         const handleScroll = () => {
             const currentScrollPos = window.scrollY;
@@ -54,22 +54,22 @@ export default function Nav() {
                 window.prevScrollpos = currentScrollPos;
             }
 
-            sections.forEach((sec) => {
-                const top = window.scrollY;
-                const offset = sec.offsetTop - 500;
-                const height = sec.offsetHeight;
-                const id = sec.getAttribute('id');
+            // sections.forEach((sec) => {
+            //     const top = window.scrollY;
+            //     const offset = sec.offsetTop - 500;
+            //     const height = sec.offsetHeight;
+            //     const id = sec.getAttribute('id');
 
-                if (top >= offset && top < offset + height) {
-                    navLinks.forEach((link) => {
-                        link.classList.remove('active');
-                        const activeLink = document.querySelector(`nav a[href*=${id}]`);
-                        if (activeLink) {
-                            activeLink.classList.add('active');
-                        }
-                    });
-                }
-            });
+            //     if (top >= offset && top < offset + height) {
+            //         navLinks.forEach((link) => {
+            //             link.classList.remove('active');
+            //             const activeLink = document.querySelector(`nav a[href*=${id}]`);
+            //             if (activeLink) {
+            //                 activeLink.classList.add('active');
+            //             }
+            //         });
+            //     }
+            // });
         };
 
         window.addEventListener('scroll', handleScroll);
