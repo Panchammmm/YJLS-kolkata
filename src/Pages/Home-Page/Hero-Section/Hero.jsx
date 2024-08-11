@@ -24,10 +24,10 @@ function Hero() {
                         Elevate Your Career to Unprecedented Heights at Yume Japanese Language School – South Kolkata’s Premier Institution for Advanced Japanese Language Education. Engage with our Expert Faculty to Master the Language, Open Global Doors, and Equip Yourself with the Essential Skills and Knowledge to Excel in Today's Competitive Landscape.
                     </p>
 
-                    <div className="flex pl-3 mt-5">
-                        <button className="read-button">Read More</button>
+                    <div className="flex pl-3 mt-6">
+                        <button className="read-button shadow-xl">Read More</button>
 
-                        <button className="btn-con ml-4">
+                        <button className="btn-con ml-4 shadow-xl">
                             Contact Now
                             <div className="arrow-wrapper-con">
                                 <div className="arrow-con"></div>

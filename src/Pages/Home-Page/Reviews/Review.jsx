@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
+import React from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
-import { useSwipeable } from 'react-swipeable';
 
 import back2 from "../../../assets/testimon2.jpg";
 
@@ -39,7 +41,7 @@ const testimonials = [
         name: "Anju Maheshwari Sarkhel",
         img_url: "https://lh3.googleusercontent.com/a-/ALV-UjVWvLIW54AN6Mo74iu_xImJEZtl5jcu6A-FJCCb_9LlcVqzR1M=w75-h75-p-rp-mo-br100",
         stars: 5,
-        disc: `Awesome place. Teachers are anazing and easy going...`
+        disc: `Awesome place. Teachers are amazing and easy going...`
     },
     {
         name: "Bikram Mistry",
@@ -48,54 +50,72 @@ const testimonials = [
         disc: `Best language school.`
     },
     {
-        name: "mousumi sarkar",
+        name: "Mousumi Sarkar",
         img_url: "https://lh3.googleusercontent.com/a-/ALV-UjXXIT5mSQMPLmBCGVn-xQilDZYb_yV3OqzJ0rpgs6hN1WXeuqiLRA=w75-h75-p-rp-mo-br100",
         stars: 5,
         disc: `The teachers are really helpful.`
     },
 ];
 
-const Review = () => {
-    const [currentIndex, setCurrentIndex] = useState(0);
+function SampleNextArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+        <div
+            className={className}
+            style={{ ...style, display: "block", scale: "1.3" }}
+            onClick={onClick}
+        />
+    );
+}
 
-    const prevSlide = () => {
-        const isFirstSlide = currentIndex === 0;
-        const newIndex = isFirstSlide ? testimonials.length - 1 : currentIndex - 1;
-        setCurrentIndex(newIndex);
+function SamplePrevArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+        <div
+            className={className}
+            style={{ ...style, display: "block", scale: "1.3" }}
+            onClick={onClick}
+        />
+    );
+}
+
+function Review() {
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        pauseOnHover: true,
+        nextArrow: <SampleNextArrow />,
+        prevArrow: <SamplePrevArrow />,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                },
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                },
+            },
+        ],
     };
-
-    const nextSlide = () => {
-        const isLastSlide = currentIndex === testimonials.length - 1;
-        const newIndex = isLastSlide ? 0 : currentIndex + 1;
-        setCurrentIndex(newIndex);
-    };
-
-    const getVisibleTestimonials = () => {
-        if (window.innerWidth >= 1024) {
-            return testimonials.slice(currentIndex, currentIndex + 3);
-        } else if (window.innerWidth >= 768) {
-            return testimonials.slice(currentIndex, currentIndex + 2);
-        } else {
-            return testimonials.slice(currentIndex, currentIndex + 1);
-        }
-    };
-
-    const swipeHandlers = useSwipeable({
-        onSwipedLeft: () => nextSlide(),
-        onSwipedRight: () => prevSlide(),
-        preventDefaultTouchmoveEvent: true,
-        trackMouse: true,
-    });
 
     return (
         <div className="relative">
-            {/* testimonial section with background image */}
             <div
-                className="bg-cover bg-center bg-no-repeat py-[120px] relative z-10"
+                className="bg-cover bg-center bg-no-repeat py-[120px] relative"
                 style={{ backgroundImage: `url(${back2})` }}
-                {...swipeHandlers}
             >
-                <div className="absolute inset-0 bg-black opacity-[0.78] z-10"></div> {/* Dark overlay */}
+                <div className="absolute inset-0 bg-black opacity-[0.78] z-10"></div> {/* dark overlay */}
                 <div className="container mx-auto text-center relative z-20">
                     <h2 className="text-4xl font-bold mb-4 text-white">
                         What <span className="text-orange-500">People</span> Say
@@ -103,40 +123,31 @@ const Review = () => {
                     <p className="text-gray-100 mb-8 lowercase">
                         STUDENT AND PARENTS OPINION
                     </p>
-
-                    <div className="flex justify-center items-center space-x-8">
-                        {getVisibleTestimonials().map((testimonial, index) => (
-                            <div
-                                key={index}
-                                className="bg-gray-300 p-6 rounded-lg shadow-lg max-w-sm transition duration-300 transform flex-shrink-0 w-[360px] h-[300px]"
-                            >
-                                <img
-                                    src={testimonial.img_url}
-                                    alt={testimonial.name}
-                                    className="w-20 h-20 rounded-full mx-auto mb-4"
-                                />
-                                <p className="text-slate-900 mb-4">
-                                    {testimonial.disc}
-                                </p>
-                                <h4 className="font-bold">{testimonial.name}</h4>
-                                <p className="text-lg text-yellow-500">★★★★★</p>
-                            </div>
-                        ))}
-                    </div>
-
-                    {/* Navigation Buttons */}
-                    <div className="mt-8 flex justify-center items-center">
-                        <button onClick={prevSlide} className="p-3 rounded-full bg-gray-300 mx-2 hover:bg-white">
-                            <FaArrowLeft />
-                        </button>
-                        <button onClick={nextSlide} className="p-3 rounded-full bg-gray-300 mx-2 hover:bg-white">
-                            <FaArrowRight />
-                        </button>
+                    <div className="w-[80%] mx-auto">
+                        <Slider {...settings}>
+                            {testimonials.map((testimonial, index) => (
+                                <div
+                                    key={index}
+                                    className="bg-gray-300 p-6 rounded-lg shadow-lg transition duration-300 transform max-w-[390px] h-[300px] text-center"
+                                >
+                                    <img
+                                        src={testimonial.img_url}
+                                        alt={testimonial.name}
+                                        className="w-20 h-20 rounded-full mx-auto mb-6 mt-2"
+                                    />
+                                    <p className="text-slate-900 mb-4">
+                                        {testimonial.disc}
+                                    </p>
+                                    <h4 className="font-bold">{testimonial.name}</h4>
+                                    <p className="text-lg text-yellow-500">{"★".repeat(testimonial.stars)}</p>
+                                </div>
+                            ))}
+                        </Slider>
                     </div>
                 </div>
             </div>
         </div>
     );
-};
+}
 
 export default Review;

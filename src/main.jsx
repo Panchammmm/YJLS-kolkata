@@ -7,6 +7,8 @@ import Home from './Pages/Home-Page/Home';
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import About from './Pages/About-Page/About';
+import Course from './Pages/Course-Page/Course';
+import Contact from './Pages/Contact-Page/Contact';
 
 const router = createBrowserRouter([
   {
@@ -26,6 +28,26 @@ const router = createBrowserRouter([
       <>
         <Navbar />
         <About />
+      </>
+    )
+  },
+  {
+    // Course Page
+    path: '/Course',
+    element: (
+      <>
+        <Navbar />
+        <Course />
+      </>
+    )
+  },
+  {
+    // Contact Page
+    path: '/Contact',
+    element: (
+      <>
+        <Navbar />
+        <Contact />
       </>
     )
   }

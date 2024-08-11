@@ -2,7 +2,6 @@
 .read-button {
     background: #ddd;
     border-radius: 7px;
-    box-shadow: 8px 8px 15px 5px #1e040073;
     padding: 10px 40px;
     line-height: 20px;
     cursor: pointer;
