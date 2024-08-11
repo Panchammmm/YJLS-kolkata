@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const categories = ['All', 'Photography', 'Class', 'Students'];
+const categories = ['All', 'Photography', 'Students', 'Class'];
 
 const images = {
   All: [
@@ -19,17 +19,17 @@ const images = {
     'https://via.placeholder.com/300x200?text=Branding+3',
     'https://via.placeholder.com/300x200?text=Branding+4',
   ],
-  Class: [
-    'https://via.placeholder.com/300x200?text=Design+1',
-    'https://via.placeholder.com/300x200?text=Design+2',
-    'https://via.placeholder.com/300x200?text=Design+3',
-    'https://via.placeholder.com/300x200?text=Design+4',
-  ],
   Students: [
     'https://via.placeholder.com/300x200?text=Photography+1',
     'https://via.placeholder.com/300x200?text=Photography+2',
     'https://via.placeholder.com/300x200?text=Photography+3',
     'https://via.placeholder.com/300x200?text=Photography+4',
+  ],
+  Class: [
+    'https://via.placeholder.com/300x200?text=Design+1',
+    'https://via.placeholder.com/300x200?text=Design+2',
+    'https://via.placeholder.com/300x200?text=Design+3',
+    'https://via.placeholder.com/300x200?text=Design+4',
   ],
 };
 

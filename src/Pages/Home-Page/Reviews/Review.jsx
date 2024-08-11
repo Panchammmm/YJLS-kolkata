@@ -108,18 +108,18 @@ const Review = () => {
                         {getVisibleTestimonials().map((testimonial, index) => (
                             <div
                                 key={index}
-                                className="bg-[#ed7d22] p-6 rounded-lg shadow-lg max-w-sm transition duration-300 transform flex-shrink-0 w-[360px] h-[300px]"
+                                className="bg-gray-300 p-6 rounded-lg shadow-lg max-w-sm transition duration-300 transform flex-shrink-0 w-[360px] h-[300px]"
                             >
                                 <img
                                     src={testimonial.img_url}
                                     alt={testimonial.name}
                                     className="w-20 h-20 rounded-full mx-auto mb-4"
                                 />
-                                <p className="text-white mb-4">
+                                <p className="text-slate-900 mb-4">
                                     {testimonial.disc}
                                 </p>
                                 <h4 className="font-bold">{testimonial.name}</h4>
-                                <p className="text-lg text-yellow-300">★★★★★</p>
+                                <p className="text-lg text-yellow-500">★★★★★</p>
                             </div>
                         ))}
                     </div>
