@@ -78,7 +78,7 @@ const CourseCard = ({ course }) => (
 );
 
 const CourseSection = () => (
-    <section className="bg-white pt-[120px] pb-[110px]">
+    <section className="pt-[120px] pb-[110px]">
         <div>
             <h1 className="text-3xl font-bold text-center mb-4 capitalize">Popular <span className="text-orange-500">Courses</span></h1>
             <p className="text-center text-gray-600 mb-8 px-[25vw]">

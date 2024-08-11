@@ -16,17 +16,6 @@ body {
   background: white;
 }
 
-/* backgroud image styling */
-
-.bg-style {
-    position: fixed;
-    opacity: 0.05;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    z-index: -5;
-}
-
 /* Scrollbar Styles */
 
 ::-webkit-scrollbar {
@@ -38,12 +27,12 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #ffb443;
+    background: #fb923c;
     border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #754500;
+    background: #ff7707;
 }
 
 /* border style */

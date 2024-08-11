@@ -42,7 +42,7 @@ const PhotoGallery = () => {
 
   return (
     <div className="bg-gray-100 p-8  pt-[120px] pb-[120px]">
-      <h2 className="text-3xl font-bold text-center mb-4">Photo Gallery</h2>
+      <h2 className="text-3xl font-bold text-center mb-4">Photo <span className="text-orange-500">Gallery</span></h2>
       <p className="text-center text-gray-600 mb-8">
         Explore our diverse gallery across various categories.
       </p>
