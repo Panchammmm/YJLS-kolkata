@@ -1,0 +1,103 @@
+.contact-section {
+    display: grid;
+    margin: auto;
+    width: 80%;
+    margin-top: 125px;
+    margin-bottom: 50px;
+}
+
+.container {
+    margin-top: 2rem;
+    position: relative;
+    padding: 2rem 0;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media(max-width:500px) {
+
+    .contact-section {
+        margin-top: 110px;
+    }
+}
+
+.cont-des {
+    font-size: clamp(1rem, 4vw, 2rem);
+    text-transform: capitalize;
+    margin-top: 8px;
+}
+
+@media (max-width: 650px) {
+    .container {
+        flex-direction: column;
+        gap: 3rem;
+    }
+}
+
+.form {
+    flex: 1;
+}
+
+.form h1 {
+    font-size: 1.3rem;
+    padding-bottom: 0.7rem;
+}
+
+.form form {
+    background: linear-gradient(to bottom, white 0%, #D7D0D3 100%);
+    padding: 1.2rem;
+    border-radius: 10px;
+}
+
+.form form .name,
+.form form .message {
+    display: flex;
+    border: 1px solid gray;
+    margin-bottom: 0.5rem;
+}
+
+.form form .name input,
+.form form .message textarea {
+    width: 100%;
+    border: none;
+    outline: none;
+    color: rgba(0, 0, 0, 0.8);
+    background-color: transparent;
+    padding: 1rem 0.5rem;
+}
+
+.form form .name span,
+.form form .message span {
+    background-color: #D7D0D3;
+    width: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form form .message .messageIcon {
+    align-items: flex-start;
+    padding-top: 1.2rem;
+}
+
+.form form button {
+    letter-spacing: 0.5px;
+    margin-top: 10px;
+    font-weight: 600;
+    padding: 9px 30px;
+    font-size: 16px;
+    background-color: #ff780a;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    filter: drop-shadow(0px 4px 5px #fcaf70);
+    cursor: pointer;
+    transition: all 0.1s ease;
+}
+
+.form form button:hover {
+    opacity: 0.8;
+}
