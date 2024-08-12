@@ -196,7 +196,7 @@ const JLPTCourse = () => {
                                     </div>
                                     <div className="flex items-center">
                                         <span className="text-orange-600 text-lg font-semibold">{course.price} /-</span>
-                                        <span className="bg-yellow-200 text-yellow-800 px-2 py-1 ml-3 rounded-full">{course.discount}% Off</span>
+                                        <span className="bg-yellow-200 text-yellow-800 px-2 py-1 ml-3 rounded-full text-sm">{course.discount}% Off</span>
                                     </div>
                                 </div>
 
