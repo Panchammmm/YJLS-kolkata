@@ -116,13 +116,16 @@ function Review() {
                 style={{ backgroundImage: `url(${back2})` }}
             >
                 <div className="absolute inset-0 bg-black opacity-[0.78] z-10"></div> {/* dark overlay */}
-                <div className="container mx-auto text-center relative z-20">
-                    <h2 className="text-4xl font-bold mb-4 text-white">
-                        What <span className="text-orange-500">People</span> Say
-                    </h2>
-                    <p className="text-gray-100 mb-8 lowercase">
-                        STUDENT AND PARENTS OPINION
-                    </p>
+                <div className="container mx-auto relative z-20">
+                    <div className="text-center">
+                        <h2 className="text-4xl font-bold mb-4 text-white">
+                            What <span className="text-orange-500">People</span> Say
+                        </h2>
+                        <p className="text-gray-100 mb-8 lowercase">
+                            STUDENT AND PARENTS OPINION
+                        </p>
+                    </div>
+
                     <div className="w-[80%] mx-auto">
                         <Slider {...settings}>
                             {testimonials.map((testimonial, index) => (

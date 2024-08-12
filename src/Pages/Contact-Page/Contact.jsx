@@ -57,7 +57,7 @@ const ContactForm = () => {
         <div id="contact" className="contact-section">
             <h1 className="text-3xl font-bold capitalize">Send your <span className="text-orange-500">enquiries</span></h1>
 
-            <div className="container">
+            <div className="c-container">
                 <div className="form">
                     <div>
                         <form onSubmit={handleSubmit(handleFormSubmit)}>
@@ -109,7 +109,7 @@ const ContactForm = () => {
                         {/* Success/Error message */}
                         {isSubmitSuccessful && (
                             <div
-                                className={`mt-3 ml-1 text-sm ${isSuccess ? 'text-green-500' : 'text-red-500'}`}
+                                className={`mt-3 ml-1 text-base ${isSuccess ? 'text-green-500' : 'text-red-500'}`}
                                 role="alert"
                                 aria-live="polite"
                             >

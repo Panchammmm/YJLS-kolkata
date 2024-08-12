@@ -28,11 +28,11 @@ const courses = [
 
 const CourseCard = ({ course }) => (
     <div className="relative flex w-80 flex-col rounded-xl bg-white text-gray-700 shadow-xl">
-        <div className="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl bg-gradient-to-r from-blue-500 to-blue-600">
+        <div className="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl">
             <img src={course.image} alt={course.title} className="w-full h-full object-cover" />
         </div>
         <div className="p-5">
-            <h6 className="text-yellow-300 tracking-[1px]">New</h6>
+            <h6 className="bg-green-400 text-white text-sm w-fit rounded-[5px] px-3 py-1 mb-3 font-semibold">New</h6>
             <h5 className="text-xl font-semibold leading-snug text-blue-gray-900">
                 {course.title}
             </h5>
