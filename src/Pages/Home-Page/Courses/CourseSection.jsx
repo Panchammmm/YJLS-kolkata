@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaArrowRight } from 'react-icons/fa';
+import { FaArrowRight, FaHourglassEnd } from 'react-icons/fa';
 
 import C1 from "../../../assets/Courses/course1.jpg";
 import C2 from "../../../assets/Courses/course2.jpg";
@@ -11,18 +11,27 @@ const courses = [
         title: 'JLPT N5',
         rating: '4.5',
         description: 'Beginner level Japanese. Perfect for those new to Japanese.',
+        price: 900,
+        originalPrice: 1800,
+        discount: 50
     },
     {
         image: C2,
         title: 'JLPT N4',
         rating: '4.8',
         description: 'Basic Japanese skills. Suitable for learners with prior knowledge.',
+        price: 900,
+        originalPrice: 1800,
+        discount: 50
     },
     {
         image: C3,
         title: 'JLPT N3',
         rating: '4.7',
         description: 'Intermediate Japanese skills. Ideal for improving conversation skills.',
+        price: 900,
+        originalPrice: 1800,
+        discount: 50
     },
 ];
 
@@ -32,10 +41,18 @@ const CourseCard = ({ course }) => (
             <img src={course.image} alt={course.title} className="w-full h-full object-cover" />
         </div>
         <div className="p-5">
-            <h6 className="bg-green-400 text-white text-sm w-fit rounded-[5px] px-3 py-1 mb-3 font-semibold">New</h6>
+            <div className="flex justify-between my-auto">
+                <h6 className="bg-green-400 text-white text-sm w-fit rounded-[5px] px-3 py-1 mb-3 font-semibold">New</h6>
+                <div className="flex mr-2 text-[#9da4af] h-fit p-1 rounded-[8px]">
+                    <FaHourglassEnd />
+                    <span className="text-sm ml-1">1 Year</span>
+                </div>
+            </div>
+
             <h5 className="text-xl font-semibold leading-snug text-blue-gray-900">
                 {course.title}
             </h5>
+
             <div className="flex flex-row">
                 {[...Array(4)].map((_, i) => (
                     <svg
@@ -62,11 +79,21 @@ const CourseCard = ({ course }) => (
                 </svg>
                 <span className="text-sm ml-3">{course.rating}</span>
             </div>
+
             <p className="flex mt-2 text-base font-light leading-relaxed text-gray-700 line-clamp-3">
                 {course.description}
             </p>
-        </div>
-        <div className="p-6 pt-0">
+
+            <div className="grid mt-4 mb-4 ml-1">
+                <div className="leading-4 ml-2 text-sm font-medium text-gray-400">
+                    <span className="line-through mr-4">{course.originalPrice} /-</span>
+                </div>
+                <div className="flex items-center">
+                    <span className="text-orange-600 text-lg font-semibold">{course.price} /-</span>
+                    <span className="bg-yellow-200 text-yellow-800 px-2 py-1 ml-3 rounded-full">{course.discount}% Off</span>
+                </div>
+            </div>
+
             <button
                 type="button"
                 className="select-none rounded-lg bg-orange-500 py-3 px-6 text-center font-bold text-white shadow-md transition-all hover:shadow-lg hover:shadow-yellow-500/40 focus:opacity-85 active:opacity-85 disabled:pointer-events-none disabled:opacity-50"
