@@ -28,11 +28,12 @@ export default function Nav() {
         });
     };
 
-    const handleMenuItemClick = (e) => {
+    const handleMenuItemClick = () => {
         setIsMenuOpen(false);
         if (checkBox) {
             checkBox.checked = false;
         }
+        window.scrollTo(0, 0);
     };
 
     const handleLanguageChange = (e) => {
@@ -77,7 +78,7 @@ export default function Nav() {
             <div className="mx-auto flex items-center justify-between py-2">
                 <div className="inline-flex items-center space-x-2">
                     <div className="flex justify-center h-[4.3rem]">
-                        <img src={logo} alt="nav-logo"></img>
+                        <img src={logo} alt="nav-logo" />
                     </div>
                 </div>
 

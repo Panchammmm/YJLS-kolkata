@@ -112,7 +112,7 @@ const ContactForm = () => {
                                         {...register("message", { required: true })}
                                     />
                                 </div>
-                                <button type="submit">Submit</button>
+                                <button type="submit" className="bg-orange-500">Submit</button>
                             </form>
 
                             {/* Success/Error message */}

@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import "./index.css";
 
 import Navbar from "./Navbar/Nav";
+import Footer from './Footer/Footer';
 import Home from './Pages/Home-Page/Home';
-
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import About from './Pages/About-Page/About';
 import Course from './Pages/Course-Page/Course';
 import Contact from './Pages/Contact-Page/Contact';
@@ -18,6 +18,7 @@ const router = createBrowserRouter([
       <>
         <Navbar />
         <Home />
+        <Footer />
       </>
     )
   },
@@ -28,6 +29,7 @@ const router = createBrowserRouter([
       <>
         <Navbar />
         <About />
+        <Footer />
       </>
     )
   },
@@ -38,6 +40,7 @@ const router = createBrowserRouter([
       <>
         <Navbar />
         <Course />
+        <Footer />
       </>
     )
   },
@@ -48,6 +51,7 @@ const router = createBrowserRouter([
       <>
         <Navbar />
         <Contact />
+        <Footer />
       </>
     )
   }
