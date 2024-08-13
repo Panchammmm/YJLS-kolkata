@@ -117,9 +117,9 @@ const JLPTCourse = () => {
 
     return (
         <section className="bg-gray-100 p-8 pt-[100px] pb-[120px]">
-            <h2 className="text-3xl font-bold text-center mb-4">JLPT <span className="text-orange-500">Courses</span></h2>
+            <h2 className="text-3xl font-bold text-center mb-3">JLPT <span className="text-orange-500">Courses</span></h2>
             <p className="text-center text-gray-600 mb-8">
-                Explore our courses across various categories.
+                Discover our comprehensive courses tailored to various proficiency levels.
             </p>
 
             <div className="flex justify-center mb-6">
