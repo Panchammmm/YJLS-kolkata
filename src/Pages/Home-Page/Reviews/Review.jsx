@@ -121,8 +121,8 @@ function Review() {
                         <h2 className="text-4xl font-bold mb-4 text-white">
                             What <span className="text-orange-500">People</span> Say
                         </h2>
-                        <p className="text-gray-100 mb-8 lowercase">
-                            STUDENT AND PARENTS OPINION
+                        <p className="text-gray-100 mb-8">
+                            Student and parent testimonials sharing their experiences and opinions.
                         </p>
                     </div>
 

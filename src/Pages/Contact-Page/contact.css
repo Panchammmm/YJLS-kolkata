@@ -118,13 +118,16 @@
 }
 
 .contact-detail {
+    display: flex;
+    align-items: center;
     font-size: 1.2rem;
-    font-weight: 500;
     position: relative;
+    color: #555;
+    gap: 5px;
 }
 
 .contact-detail:hover {
-    color: #9a9794;
+    text-decoration: underline;
 }
 
 @media (max-width: 640px) {
@@ -141,4 +144,31 @@
         display: flex;
         font-size: 1.06rem;
     }
+}
+
+/* arrow */
+
+.button__icon-wrapper {
+    width: 25px;
+    height: 25px;
+    position: relative;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+.button__icon-svg--copy {
+    position: absolute;
+    transform: translate(-150%, 150%);
+}
+
+.contact-detail:hover .button__icon-svg:first-child {
+    transition: transform .3s ease-in-out;
+    transform: translate(150%, -150%);
+}
+
+.contact-detail:hover .button__icon-svg--copy {
+    transition: transform .3s ease-in-out .1s;
+    transform: translate(0);
 }

@@ -1,10 +1,23 @@
 import React from "react";
 import { FaSmile, FaUsers, FaBook, FaChalkboardTeacher, FaGraduationCap } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 import "./hero.css";
 
 import landing from "../../../assets/landing-image.jpg";
 
 function Hero() {
+    const navigate = useNavigate();
+
+    const handleReadMoreClick = () => {
+        window.scrollTo(0, 0);
+        navigate('/About');
+    };
+
+    const handleContactNowClick = () => {
+        window.scrollTo(0, 0);
+        navigate('/Contact');
+    };
+
     return (
         <div>
             {/* Background image */}
@@ -25,9 +38,9 @@ function Hero() {
                     </p>
 
                     <div className="flex pl-3 mt-6">
-                        <button className="read-button shadow-xl">Read More</button>
+                        <button className="read-button shadow-xl" onClick={handleReadMoreClick}>Read More</button>
 
-                        <button className="btn-con ml-4 shadow-xl">
+                        <button className="btn-con ml-4 shadow-xl" onClick={handleContactNowClick}>
                             Contact Now
                             <div className="arrow-wrapper-con">
                                 <div className="arrow-con"></div>

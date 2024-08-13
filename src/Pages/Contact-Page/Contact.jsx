@@ -61,7 +61,7 @@ const ContactForm = () => {
         <div id="contact" className="pt-[100px] pb-[120px] bg-gray-100">
             <h1 className="text-3xl font-bold capitalize text-center mb-3">Send Your <span className="text-orange-500">Enquiries</span></h1>
             <p className="text-center text-gray-600 mb-8">
-            We encourage you to stay connected with us. Please don't hesitate to reach out with any inquiries you may have.
+                Stay connected and reach out with any inquiries you may have.
             </p>
 
             <div className="flex flex-wrap justify-center gap-10">
@@ -142,12 +142,18 @@ const Address = () => {
             <div className="contact-item">
                 <img src={wapp} alt="whatsapp" className="contact-icon" />
                 <div className="my-auto">
-                    <h3 className="contact-label text-green-700">Whatsapp</h3>
+                    <h3 className="contact-label">Whatsapp</h3>
                     <a href="https://wa.me/918013072585" target="_blank" rel="noopener noreferrer">
-                        <p className="contact-detail">+91 80130 72585</p>
+                        <p className="contact-detail">
+                            +91 80130 72585
+                            <Arrow />
+                        </p>
                     </a>
                     <a href="https://wa.me/918777671272" target="_blank" rel="noopener noreferrer">
-                        <p className="contact-detail">+91 87776 71272</p>
+                        <p className="contact-detail">
+                            +91 87776 71272
+                            <Arrow />
+                        </p>
                     </a>
                 </div>
             </div>
@@ -155,9 +161,12 @@ const Address = () => {
             <div className="contact-item">
                 <img src={email} alt="email" className="contact-icon" />
                 <div>
-                    <h3 className="contact-label text-orange-700">Email</h3>
+                    <h3 className="contact-label">Email</h3>
                     <a href="mailto:Yumejapaneseschool@gmail.com" target="_blank" rel="noopener noreferrer">
-                        <p className="contact-detail">Yumejapaneseschool@gmail.com</p>
+                        <p className="contact-detail">
+                            Yumejapaneseschool@gmail.com
+                            <Arrow />
+                        </p>
                     </a>
                 </div>
             </div>
@@ -165,9 +174,16 @@ const Address = () => {
             <div className="contact-item">
                 <img src={location} alt="location" className="contact-icon" />
                 <div>
-                    <h3 className="contact-label text-red-800">Location</h3>
-                    <a href="https://maps.app.goo.gl/NyC6MFCtXFqLYXfz5" target="_blank" rel="noopener noreferrer">
-                        <p className="contact-detail break-all">Mali Pukria, near IILDS Hospital, Rajpur Sonarpur, Kolkata,<br></br> Mali Pukuria, West Bengal 700150</p>
+                    <h3 className="contact-label">Location</h3>
+                    <a href="https://maps.app.goo.gl/NyC6MFCtXFqLYXfz5" target="_blank" rel="noopener noreferrer" className="contact-detail">
+                        <p className="grid">
+                            <span>
+                                Mali Pukria, near IILDS Hospital, Rajpur Sonarpur, Kolkata,
+                            </span>
+                            <span className="flex gap-[5px]">
+                                Mali Pukuria, West Bengal 700150 <Arrow />
+                            </span>
+                        </p>
                     </a>
                 </div>
             </div>
@@ -175,4 +191,18 @@ const Address = () => {
             <iframe className="ml-[70px] mt-3" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14905.1007375459!2d88.4544983!3d22.4342955!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a02737ef7e863a3%3A0x2f0e6f81264ed215!2sYume%20Japanese%20Language%20School!5e1!3m2!1sen!2sin!4v1723487230915!5m2!1sen!2sin" width="500" height="220" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     )
+}
+
+const Arrow = () => {
+    return (
+        <span className="button__icon-wrapper">
+            <svg width="10" className="button__icon-svg" xmlns="http://www.w3.org/2000/svg" fill="#555" viewBox="0 0 14 15">
+                <path d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"></path>
+            </svg>
+
+            <svg className="button__icon-svg button__icon-svg--copy" xmlns="http://www.w3.org/2000/svg" width="10" fill="#555" viewBox="0 0 14 15">
+                <path d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"></path>
+            </svg>
+        </span>
+    );
 }
