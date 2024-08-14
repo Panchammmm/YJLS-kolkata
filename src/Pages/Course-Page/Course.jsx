@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { FaHourglassEnd } from 'react-icons/fa';
 import coursebg from "../../assets/page-banner/courses.png";
 
@@ -135,9 +136,34 @@ const courses = {
 
 const CourseList = () => {
     const [activeCategory, setActiveCategory] = useState('All');
+    const [visibleCourses, setVisibleCourses] = useState(6);
+    const [isTransitioning, setIsTransitioning] = useState(false);
+    const maxVisibleCourses = 6;
 
     const handleCategoryChange = (category) => {
-        setActiveCategory(category);
+        setIsTransitioning(true);
+        setTimeout(() => {
+            setActiveCategory(category);
+            setVisibleCourses(maxVisibleCourses);
+            setIsTransitioning(false);
+        }, 300); // Adjust timing to match transition duration
+    };
+
+    const toggleVisibility = () => {
+        if (visibleCourses === maxVisibleCourses) {
+            setVisibleCourses(courses[activeCategory].length);
+        } else {
+            setVisibleCourses(maxVisibleCourses);
+        }
+    };
+
+    const currentCourses = courses[activeCategory].slice(0, visibleCourses);
+    
+    const navigate = useNavigate();
+
+    const handleContactClick = () => {
+        window.scrollTo(0, 0);
+        navigate('/Contact');
     };
 
     return (
@@ -162,9 +188,12 @@ const CourseList = () => {
                 ))}
             </div>
 
-            <div className="flex justify-center">
+            <div
+                className={`flex justify-center transition-opacity duration-300 ease-in-out ${isTransitioning ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0'
+                    }`}
+            >
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 place-items-center">
-                    {courses[activeCategory].map((course, index) => (
+                    {currentCourses.map((course, index) => (
                         <div key={index} className="relative mt-8 flex w-80 flex-col rounded-xl bg-white text-gray-700 shadow-xl">
                             <div className="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl">
                                 <img
@@ -213,7 +242,6 @@ const CourseList = () => {
                                             ></path>
                                         </svg>
                                     ))}
-                                    <span className="text-sm ml-3">{course.rating.toFixed(1)}</span>
                                 </div>
 
                                 <p className="flex mt-2 text-base font-light leading-relaxed text-gray-700 line-clamp-3">
@@ -233,6 +261,7 @@ const CourseList = () => {
                                 <button
                                     type="button"
                                     className="select-none rounded-lg bg-orange-500 py-3 px-6 text-center font-bold text-white shadow-md transition-all hover:shadow-lg hover:shadow-yellow-500/40 focus:opacity-85 active:opacity-85 disabled:pointer-events-none disabled:opacity-50"
+                                    onClick={handleContactClick}
                                 >
                                     Contact Now
                                 </button>
@@ -241,6 +270,17 @@ const CourseList = () => {
                     ))}
                 </div>
             </div>
+
+            {courses[activeCategory].length > maxVisibleCourses && (
+                <div className="flex justify-center mt-8">
+                    <button
+                        onClick={toggleVisibility}
+                        className="bg-orange-500 text-white px-4 py-2 rounded-lg font-semibold shadow-md hover:bg-orange-600"
+                    >
+                        {visibleCourses === maxVisibleCourses ? 'See More' : 'See Less'}
+                    </button>
+                </div>
+            )}
         </div>
     );
 };

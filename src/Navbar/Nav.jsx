@@ -78,9 +78,9 @@ export default function Nav() {
             <div className="mx-auto flex items-center justify-between py-2">
                 <div className="inline-flex items-center space-x-2">
                     <div className="flex justify-center my-auto">
-                        <img src={logo} alt="nav-logo" className="rounded-xl size-11 brightness-[120%]"/>
+                        <img src={logo} alt="nav-logo" className="rounded-3xl size-11 brightness-[120%] border-2 border-orange-700"/>
                         <div className="flex flex-col my-auto text-start text-white ml-3">
-                            <h1 className="tracking-widest font-semibold">YJLS</h1>
+                            <h1 className="tracking-wider font-semibold">YJLS</h1>
                             <p className="text-xs tracking-wider ml-[1px]">Yume Japanese Language School</p>
                         </div>
                     </div>

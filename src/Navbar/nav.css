@@ -19,7 +19,7 @@
     position: absolute;
     width: 0%;
     height: 2px;
-    background: linear-gradient(to right, #ff8127, #26073bd7);
+    background: linear-gradient(to right, #ff4f27, #26073bd7);
     transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
     transition-duration: 400ms;
     transition-property: width, left;

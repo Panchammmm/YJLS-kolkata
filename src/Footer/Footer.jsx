@@ -8,7 +8,7 @@ const Footer = () => {
 
     return (
         <footer
-            className="bg-[#171c28] text-gray-400 pt-16 pb-8 mt-1"
+            className="bg-[#171c28] text-gray-400 pt-16 pb-8"
             style={{
                 backgroundImage: `url(${backgroundImage})`,
                 backgroundSize: 'cover',

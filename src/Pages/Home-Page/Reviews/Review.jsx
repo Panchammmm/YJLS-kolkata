@@ -109,7 +109,7 @@ function Review() {
     };
 
     return (
-        <div className="relative">
+        <div className="relative mb-[3px]">
             <div
                 className="bg-cover bg-center bg-no-repeat py-[120px] relative"
                 style={{ backgroundImage: `url(${back2})` }}
