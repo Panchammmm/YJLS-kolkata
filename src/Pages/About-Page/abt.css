@@ -1,14 +1,7 @@
-.image-container {
-    width: 60%;
-    display: flex;
-    gap: 10px;
-}
-
 .image-card {
-    background: white;
+    background: transparent;
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     transform: perspective(1000px);
     transition: transform 0.3s ease;
     cursor: pointer;
@@ -21,6 +14,12 @@
     height: 300px;
     object-fit: cover;
     border: 5px solid #bcc0c2;
+}
+
+@media (max-width: 640px) {
+    .image-card img {
+        height: 200px;
+    }
 }
 
 .image-card:nth-child(1) {

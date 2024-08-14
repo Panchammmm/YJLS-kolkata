@@ -8,7 +8,7 @@ export default function Contact() {
     return (
         <section>
             <div className="bg-black">
-                <img src={contactbg} alt="contact" className="object-cover w-full h-[300px] sm:h-[400px] lg:h-[350px]" />
+                <img src={contactbg} alt="contact" className="object-cover w-full h-[200px] sm:h-[400px] lg:h-[350px]" />
             </div>
             <ContactForm />
         </section>
@@ -51,9 +51,9 @@ const ContactForm = () => {
     };
 
     return (
-        <div id="contact" className="pt-[100px] pb-[120px] bg-gray-100">
-            <h1 className="text-3xl font-bold text-center mb-3">Send Your <span className="text-orange-500">Enquiries</span></h1>
-            <p className="text-center text-gray-600 mb-10 px-5">Stay connected and reach out with any inquiries you may have.</p>
+        <div id="contact" className="lg:pt-[100px] pt-20 pb-[120px] bg-gray-100">
+            <h1 className="text-2xl md:text-3xl font-bold capitalize text-center mb-4">Send Your <span className="text-orange-500">Enquiries</span></h1>
+            <p className="text-center text-gray-500 mb-10 px-4">Stay connected and reach out with any inquiries you may have.</p>
 
             <div className="flex flex-col lg:flex-row justify-center gap-14 px-4 lg:px-0">
                 <div className="w-full h-full lg:w-[40%] my-auto bg-white shadow-lg rounded-lg p-8 lg:pt-10">
@@ -145,7 +145,7 @@ const Address = () => {
             </div>
 
             <div className="flex">
-                <FaMapMarkerAlt className="text-orange-500 mr-4 size-8 lg:mt-1" />
+                <FaMapMarkerAlt className="text-orange-500 mr-4 size-11 lg:size-8 lg:mt-1" />
                 <div>
                     <h3 className="font-semibold">Location</h3>
                     <a href="https://maps.app.goo.gl/NyC6MFCtXFqLYXfz5" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-orange-500 transition duration-200">

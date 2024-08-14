@@ -128,7 +128,7 @@ export default function Nav() {
                 </div>
                 {isMenuOpen && (
                     <div className={`absolute inset-x-0 top-[5rem] origin-top-right transform p-2 transition lg:hidden ${isMenuOpen ? 'transparent' : '#000'}`}>
-                        <div className="px-6 py-10 rounded-2xl bg-gradient-to-b from-gray-400 to-orange-300">
+                        <div className="px-6 py-10 rounded-2xl bg-gradient-to-b from-gray-400 to-orange-200">
                             <nav className="grid gap-y-4">
                                 {menuItems.map((item) => (
                                     <NavLink
@@ -138,18 +138,18 @@ export default function Nav() {
                                         className="-m-3 flex items-center rounded-md p-3 text-sm font-base"
                                         activeClassName="active"
                                     >
-                                        <span className="ml-3 text-base font-medium text-black">
+                                        <span className="ml-3 text-base font-medium text-gray-700">
                                             {item.name}
                                         </span>
                                     </NavLink>
                                 ))}
                             </nav>
 
-                            <div className="grid place-content-start gap-4 lg:mt-7 mt-4 lg:ml-0 ml-2">
+                            <div className="grid place-content-start gap-4 lg:mt-7 mt-4 lg:ml-0 ml-[5px]">
                                 <select
                                     value={isJapanese ? 'ja' : 'en'}
                                     onChange={handleLanguageChange}
-                                    className="text-white cursor-pointer bg-transparent border-none p-1"
+                                    className="text-gray-500 cursor-pointer bg-transparent border-none p-1"
                                 >
                                     <option value="en" className="text-black">ENG</option>
                                     <option value="ja" className="text-black">日本語</option>
