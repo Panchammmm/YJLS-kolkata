@@ -32,9 +32,9 @@ function Hero() {
                 <div className="absolute inset-0 bg-black opacity-[0.60] z-10"></div> {/* dark overlay */}
 
                 {/* Hero content */}
-                <div className="absolute pl-20 pr-[45vw] top-[32%] left-0 z-20">
+                <div className="absolute pl-20 lg:pr-[45vw] top-[32%] left-0 z-20">
                     <h1 className="text-white font-[700] text-[3.8rem] leading-[4.5rem]">
-                        Take The <span className="text-orange-400">Best</span> JLPT <br /><span className="text-orange-400">Courses</span>, Online & Offline
+                        Take The <span className="text-orange-400">Best</span> JLPT <br /><span className="text-orange-400">Teachings</span> in Kolkata, Online & Offline
                     </h1>
                     <p className="text-white pl-3 pt-4 tracking-[0.7px]">
                         Elevate Your Career to Unprecedented Heights at Yume Japanese Language School – South Kolkata’s Premier Institution for Advanced Japanese Language Education. Engage with our Expert Faculty to Master the Language, Open Global Doors, and Equip Yourself with the Essential Skills and Knowledge to Excel in Today's Competitive Landscape.
