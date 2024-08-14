@@ -1,11 +1,7 @@
 import React, { useState } from "react";
-import { FaUser, FaEnvelope, FaPaperPlane, FaPhone } from "react-icons/fa";
+import { FaUser, FaEnvelope, FaPaperPlane, FaPhone, FaWhatsapp, FaMapMarkerAlt } from "react-icons/fa";
 import { useForm } from 'react-hook-form';
 import useWeb3Forms from "@web3forms/react";
-
-import wapp from "../../assets/wapp.svg";
-import email from "../../assets/email.svg";
-import location from "../../assets/location.svg";
 
 import './contact.css';
 import contactbg from "../../assets/page-banner/contact.png";
@@ -13,7 +9,7 @@ import contactbg from "../../assets/page-banner/contact.png";
 export default function Contact() {
     return (
         <section>
-            <div className="bg-black pt-5">
+            <div className="bg-black">
                 <img src={contactbg} alt="contact"></img>
             </div>
 
@@ -135,12 +131,11 @@ const ContactForm = () => {
     );
 };
 
-
 const Address = () => {
     return (
         <div className="contact-info my-auto">
             <div className="contact-item">
-                <img src={wapp} alt="whatsapp" className="contact-icon" />
+                <FaWhatsapp className="contact-icon fill-white" />
                 <div className="my-auto">
                     <h3 className="contact-label">Whatsapp</h3>
                     <a href="https://wa.me/918013072585" target="_blank" rel="noopener noreferrer">
@@ -159,7 +154,7 @@ const Address = () => {
             </div>
 
             <div className="contact-item">
-                <img src={email} alt="email" className="contact-icon" />
+                <FaEnvelope className="contact-icon fill-white" />
                 <div>
                     <h3 className="contact-label">Email</h3>
                     <a href="mailto:Yumejapaneseschool@gmail.com" target="_blank" rel="noopener noreferrer">
@@ -172,7 +167,7 @@ const Address = () => {
             </div>
 
             <div className="contact-item">
-                <img src={location} alt="location" className="contact-icon" />
+                <FaMapMarkerAlt className="contact-icon fill-white" />
                 <div>
                     <h3 className="contact-label">Location</h3>
                     <a href="https://maps.app.goo.gl/NyC6MFCtXFqLYXfz5" target="_blank" rel="noopener noreferrer" className="contact-detail">

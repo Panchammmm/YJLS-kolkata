@@ -2,10 +2,22 @@ import React, { useState } from 'react';
 import { FaHourglassEnd } from 'react-icons/fa';
 import coursebg from "../../assets/page-banner/courses.png";
 
+import MasterN3 from "../../assets/Courses/n3.jpg";
+import CrashN3 from "../../assets/Courses/crash-n3.jpg";
+import SpN3 from "../../assets/Courses/sp-n3.jpg";
+
+import MasterN4 from "../../assets/Courses/n4.jpg";
+import CrashN4 from "../../assets/Courses/crash-n4.jpg";
+import SpN4 from "../../assets/Courses/sp-n4.jpg";
+
+import MasterN5 from "../../assets/Courses/n5.jpg";
+import CrashN5 from "../../assets/Courses/crash-n5.jpg";
+import SpN5 from "../../assets/Courses/sp-n5.jpg";
+
 export default function Course() {
     return (
         <div>
-            <div className="bg-black pt-5">
+            <div className="bg-black">
                 <img src={coursebg} alt="course"></img>
             </div>
 
@@ -16,100 +28,100 @@ export default function Course() {
 
 const N3Courses = [
     {
-        image: 'https://images.pexels.com/photos/9159063/pexels-photo-9159063.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        image: MasterN3,
         name: 'Mastering JLPT N3',
-        duration: '1 Year',
-        rating: 4.2,
-        description: 'Comprehensive curriculum covering reading, listening, and grammar for intermediate Japanese learners.',
-        price: 800,
-        originalPrice: 1600,
-        discount: 50
-    },
-    {
-        image: 'https://images.pexels.com/photos/9159063/pexels-photo-9159063.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-        name: 'N3 Crash Course',
         duration: '6 Months',
         rating: 4.2,
-        description: 'Intensive preparation focusing on essential grammar and vocabulary for the JLPT N3 exam.',
-        price: 800,
-        originalPrice: 1600,
-        discount: 50
+        description: 'Comprehensive curriculum covering reading, listening, and grammar for intermediate Japanese learners.',
+        price: 6000,
+        originalPrice: 9000,
+        discount: 33
     },
     {
-        image: 'https://images.pexels.com/photos/9159063/pexels-photo-9159063.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        image: CrashN3,
+        name: 'N3 Crash Course',
+        duration: '3 Months',
+        rating: 4.2,
+        description: 'Intensive preparation focusing on essential grammar and vocabulary for the JLPT N3 exam.',
+        price: 999,
+        originalPrice: 1600,
+        discount: 37
+    },
+    {
+        image: SpN3,
         name: 'N3 Special',
         duration: '3 Months',
         rating: 4.2,
         description: 'Specialized course offering targeted practice and expert guidance for the JLPT N3 exam.',
-        price: 800,
-        originalPrice: 1600,
-        discount: 50
+        price: 999,
+        originalPrice: 1200,
+        discount: 16
     },
 ];
 
 const N4Courses = [
     {
-        image: 'https://images.pexels.com/photos/9159063/pexels-photo-9159063.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        image: MasterN4,
         name: 'Mastering JLPT N4',
-        duration: '1 Year',
-        rating: 4.8,
-        description: 'Detailed study of JLPT N4 materials, focusing on vocabulary, grammar, and kanji for advanced beginners.',
-        price: 900,
-        originalPrice: 1800,
-        discount: 50
-    },
-    {
-        image: 'https://images.pexels.com/photos/9159063/pexels-photo-9159063.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-        name: 'N4 Crash Course',
         duration: '6 Months',
         rating: 4.8,
-        description: 'Fast-paced course designed for quick and effective preparation for the JLPT N4 exam.',
-        price: 900,
-        originalPrice: 1800,
-        discount: 50
+        description: 'Detailed study of JLPT N4 materials, focusing on vocabulary, grammar, and kanji for advanced beginners.',
+        price: 9000,
+        originalPrice: 12000,
+        discount: 25
     },
     {
-        image: 'https://images.pexels.com/photos/9159063/pexels-photo-9159063.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        image: CrashN4,
+        name: 'N4 Crash Course',
+        duration: '3 Months',
+        rating: 4.8,
+        description: 'Fast-paced course designed for quick and effective preparation for the JLPT N4 exam.',
+        price: 899,
+        originalPrice: 1400,
+        discount: 35
+    },
+    {
+        image: SpN4,
         name: 'N4 Special',
         duration: '3 Months',
         rating: 4.8,
         description: 'Specialized practice tailored for JLPT N4 with expert support to ensure successful results.',
-        price: 900,
-        originalPrice: 1800,
-        discount: 50
+        price: 999,
+        originalPrice: 1200,
+        discount: 16
     },
 ];
 
 const N5Courses = [
     {
-        image: 'https://images.pexels.com/photos/9159063/pexels-photo-9159063.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        image: MasterN5,
         name: 'Mastering JLPT N5',
-        duration: '1 Year',
-        rating: 4.8,
-        description: 'Foundational course covering basic aspects of Japanese including vocabulary, grammar, and kanji.',
-        price: 900,
-        originalPrice: 1800,
-        discount: 50
-    },
-    {
-        image: 'https://images.pexels.com/photos/9159063/pexels-photo-9159063.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-        name: 'N5 Crash Course',
         duration: '6 Months',
         rating: 4.8,
-        description: 'Intensive program for rapid preparation of the JLPT N5 exam, focusing on key elements of the language.',
-        price: 900,
-        originalPrice: 1800,
-        discount: 50
+        description: 'Foundational course covering basic aspects of Japanese including vocabulary, grammar, and kanji.',
+        price: 6000,
+        originalPrice: 9000,
+        discount: 33
     },
     {
-        image: 'https://images.pexels.com/photos/9159063/pexels-photo-9159063.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        image: CrashN5,
+        name: 'N5 Crash Course',
+        duration: '3 Months',
+        rating: 4.8,
+        description: 'Intensive program for rapid preparation of the JLPT N5 exam, focusing on key elements of the language.',
+        price: 799,
+        originalPrice: 1000,
+        discount: 20
+    },
+    {
+        image: SpN5,
         name: 'N5 Special',
         duration: '3 Months',
         rating: 4.8,
         description: 'Special course with in-depth materials and personalized support to excel in the JLPT N5 exam.',
-        price: 900,
-        originalPrice: 1800,
-        discount: 50
+        price: 999,
+        originalPrice: 1200,
+        discount: 16
     },
 ];
 

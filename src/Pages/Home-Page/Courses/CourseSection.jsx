@@ -2,38 +2,40 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FaArrowRight, FaHourglassEnd } from 'react-icons/fa';
 
-import C1 from "../../../assets/Courses/course1.jpg";
-import C2 from "../../../assets/Courses/course2.jpg";
-import C3 from "../../../assets/Courses/course3.jpg";
-
+import N5 from "../../../assets/Courses/n5.jpg";
+import N4 from "../../../assets/Courses/n4.jpg";
+import N3 from "../../../assets/Courses/n3.jpg";
 const courses = [
     {
-        image: C1,
+        image: N5,
         title: 'JLPT N5',
+        duration: '6 Months',
         rating: '4.5',
         description: 'Beginner level Japanese. Perfect for those new to Japanese.',
-        price: 900,
-        originalPrice: 1800,
-        discount: 50
+        price: 6000,
+        originalPrice: 9000,
+        discount: 33
     },
     {
-        image: C2,
+        image: N4,
         title: 'JLPT N4',
+        duration: '6 Months',
         rating: '4.8',
         description: 'Basic Japanese skills. Suitable for learners with prior knowledge.',
-        price: 900,
-        originalPrice: 1800,
-        discount: 50
+        price: 9000,
+        originalPrice: 12000,
+        discount: 25
     },
     {
-        image: C3,
+        image: N3,
         title: 'JLPT N3',
+        duration: '6 Months',
         rating: '4.7',
         description: 'Intermediate Japanese skills. Ideal for improving conversation skills.',
-        price: 900,
-        originalPrice: 1800,
-        discount: 50
-    },
+        price: 12000,
+        originalPrice: 18000,
+        discount: 33
+    }    
 ];
 
 function CourseCard({ course }) {
@@ -54,7 +56,7 @@ function CourseCard({ course }) {
                     <h6 className="bg-green-400 text-white text-sm w-fit rounded-[5px] px-3 py-1 mb-3 font-semibold">New</h6>
                     <div className="flex mr-2 text-[#9da4af] h-fit p-1 rounded-[8px]">
                         <FaHourglassEnd />
-                        <span className="text-sm ml-1">1 Year</span>
+                        <span className="text-sm ml-1">{course.duration}</span>
                     </div>
                 </div>
 

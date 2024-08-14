@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import './nav.css';
-import logo from "../assets/site-nav-logo.png";
+import logo from "../assets/site-logo-new.png";
 
 const menuItems = [
     { name: 'Home', href: '/' },
@@ -47,7 +47,7 @@ export default function Nav() {
             const currentScrollPos = window.scrollY;
             if (mainHeader) {
                 mainHeader.style.top = (currentScrollPos < (window.prevScrollpos || 0)) ? "0" : "-480px";
-                mainHeader.style.background = currentScrollPos === 0 ? '#000' : '#000';
+                mainHeader.style.background = currentScrollPos === 0 ? 'transparent' : '#000';
                 mainHeader.style.filter = currentScrollPos === 0 ? 'none' : '';
 
                 window.prevScrollpos = currentScrollPos;
@@ -74,11 +74,15 @@ export default function Nav() {
     }, []);
 
     return (
-        <nav id="hide-header" className="lg:px-[6rem] px-5 bg-black">
+        <nav id="hide-header" className="lg:px-[6rem] px-5 py-3 bg-black z-30">
             <div className="mx-auto flex items-center justify-between py-2">
                 <div className="inline-flex items-center space-x-2">
-                    <div className="flex justify-center h-[4.3rem]">
-                        <img src={logo} alt="nav-logo" />
+                    <div className="flex justify-center my-auto">
+                        <img src={logo} alt="nav-logo" className="rounded-xl size-11 brightness-[120%]"/>
+                        <div className="flex flex-col my-auto text-start text-white ml-3">
+                            <h1 className="tracking-widest font-semibold">YJLS</h1>
+                            <p className="text-xs tracking-wider ml-[1px]">Yume Japanese Language School</p>
+                        </div>
                     </div>
                 </div>
 

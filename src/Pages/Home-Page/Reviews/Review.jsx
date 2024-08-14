@@ -2,9 +2,8 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 
-import back2 from "../../../assets/testimon2.jpg";
+import back2 from "../../../assets/testimonBg.jpg";
 
 const testimonials = [
     {

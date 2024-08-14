@@ -3,7 +3,7 @@ import { FaSmile, FaUsers, FaBook, FaChalkboardTeacher, FaGraduationCap } from '
 import { useNavigate } from 'react-router-dom';
 import "./hero.css";
 
-import landing from "../../../assets/landing-image.jpg";
+import landing from "../../../assets/landing-image.png";
 
 function Hero() {
     const navigate = useNavigate();
@@ -21,15 +21,18 @@ function Hero() {
     return (
         <div>
             {/* Background image */}
-            <div className="relative w-full h-[110vh]">
+            <div className="relative w-full h-[110vh] bg-black">
                 <img
                     src={landing}
+                    loading="lazy"
                     alt="landing"
-                    className="w-full h-full object-cover brightness-[38%] blur-[0.7px] -z-10"
+                    className="w-full h-full object-cover blur-[0.7px]"
                 />
 
+                <div className="absolute inset-0 bg-black opacity-[0.60] z-10"></div> {/* dark overlay */}
+
                 {/* Hero content */}
-                <div className="absolute z-[1] pl-20 pr-[45vw] top-[32%] left-0">
+                <div className="absolute pl-20 pr-[45vw] top-[32%] left-0 z-20">
                     <h1 className="text-white font-[700] text-[3.8rem] leading-[4.5rem]">
                         Take The <span className="text-orange-400">Best</span> JLPT <br /><span className="text-orange-400">Courses</span>, Online & Offline
                     </h1>

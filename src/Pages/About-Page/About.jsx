@@ -1,11 +1,16 @@
 import React from "react";
 import "./abt.css";
+
 import aboutbg from "../../assets/page-banner/about.png";
+import F1 from "../../assets/Founder/f1.jpg";
+import F2 from "../../assets/Founder/f2.jpg";
+import F3 from "../../assets/Founder/f3.jpg";
+import F4 from "../../assets/Founder/f4.jpg";
 
 export default function About() {
     return (
         <section>
-            <div className="bg-black pt-5">
+            <div className="bg-black">
                 <img src={aboutbg} alt="aboutus"></img>
             </div>
 
@@ -24,16 +29,16 @@ function Info() {
 
             <div className="image-container mx-auto">
                 <div className="image-card shadow-2xl">
-                    <img src="https://yjls-kolkata.com/static/media/hall_img7.4e1a4f627899ed02a252.jpg" alt="Image 2" />
+                    <img src={F1} alt="founder" />
                 </div>
                 <div className="image-card shadow-2xl">
-                    <img src="https://yjls-kolkata.com/static/media/hall_img3.e0ad980c90efe40809d9.jpg" alt="Image 1" />
+                    <img src={F2} alt="founder" />
                 </div>
                 <div className="image-card shadow-2xl">
-                    <img src="https://scontent.fccu3-1.fna.fbcdn.net/v/t39.30808-6/300903319_108013825368549_2806843362946799778_n.jpg?stp=cp6_dst-jpg&_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_ohc=0VB7CpCOykIQ7kNvgGtiGDt&_nc_ht=scontent.fccu3-1.fna&oh=00_AYCCTlVpN1JYPqOFs6376TzwSFc51vrfjoSdI-YltgPUyg&oe=66C1099F" alt="Image 3" />
+                    <img src={F3} alt="founder" />
                 </div>
                 <div className="image-card shadow-2xl">
-                    <img src="https://scontent.fccu3-1.fna.fbcdn.net/v/t39.30808-6/300882217_108014165368515_740063985039310532_n.jpg?stp=cp6_dst-jpg&_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_ohc=cDk88cRacZ4Q7kNvgHXulqw&_nc_ht=scontent.fccu3-1.fna&oh=00_AYCrYCtp3U2LtB0OtUtaCHYsK6GACSvSrWGhekaa1AueaA&oe=66C10162" alt="Image 4" />
+                    <img src={F4} alt="founder" />
                 </div>
             </div>
 
