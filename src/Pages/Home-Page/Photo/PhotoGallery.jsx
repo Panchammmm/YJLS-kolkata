@@ -5,7 +5,7 @@ import Photo1 from "../../../assets/galary/photo1.jpg";
 import Photo2 from "../../../assets/galary/photo2.jpg";
 import Photo3 from "../../../assets/galary/photo3.jpg";
 import Photo4 from "../../../assets/galary/photo4.jpg";
-import Photo5 from "../../../assets/galary/photo5.jpg";
+// import Photo5 from "../../../assets/galary/photo5.jpg";
 import Photo6 from "../../../assets/galary/photo6.jpg";
 import Photo7 from "../../../assets/galary/photo7.jpg";
 import Photo8 from "../../../assets/galary/photo8.jpg";
@@ -34,7 +34,7 @@ const Photography = [
   Photo2,
   Photo3,
   Photo4,
-  Photo5,
+  // Photo5,
   Photo6,
   Photo7,
   Photo8,
@@ -97,8 +97,8 @@ const PhotoGallery = () => {
   const currentImages = images[activeCategory].slice(0, visibleCount);
 
   return (
-    <div className="bg-gray-100 p-8 pt-[120px] pb-[120px]">
-      <h2 className="text-3xl font-bold text-center mb-4">
+    <div className="bg-gray-100 p-4 md:p-8 pt-[120px] pb-[120px]">
+      <h2 className="text-2xl lg:text-4xl font-bold text-center mb-4">
         Photo <span className="text-orange-500">Gallery</span>
       </h2>
       <p className="text-center text-gray-600 mb-8">
@@ -106,12 +106,12 @@ const PhotoGallery = () => {
       </p>
 
       {/* Category Buttons */}
-      <div className="flex justify-center mb-6">
+      <div className="flex flex-wrap justify-center mb-6">
         {categories.map((category) => (
           <button
             key={category}
             onClick={() => handleCategoryChange(category)}
-            className={`px-4 py-2 mx-2 rounded-lg font-semibold shadow-md 
+            className={`px-3 py-2 md:px-4 md:py-2 mx-1 md:mx-2 rounded-lg font-semibold shadow-md 
               ${activeCategory === category ? 'bg-orange-500 text-white' : 'bg-white text-gray-700'} 
               hover:bg-orange-500 hover:text-white`}
           >
@@ -126,7 +126,7 @@ const PhotoGallery = () => {
           transition-opacity duration-300 ease-in-out ${isTransitioning ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0'}`}
       >
         {currentImages.map((image, index) => (
-          <div key={index} className="w-full h-[200px] overflow-hidden rounded-lg shadow-lg">
+          <div key={index} className="w-full h-[150px] sm:h-[180px] md:h-[200px] overflow-hidden rounded-lg shadow-lg">
             <img
               src={image}
               alt={`Gallery Image ${index + 1}`}

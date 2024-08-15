@@ -13,7 +13,7 @@ const Program = () => {
 
     return (
         <div className="bg-gray-100 py-[120px]">
-            <h2 className="lg:text-4xl text-3xl font-bold text-center mb-10 lg:mb-20">
+            <h2 className="lg:text-4xl text-[28px] font-bold text-center mb-10 lg:mb-20">
                 Our <span className="text-orange-500">Programs</span>
             </h2>
 
