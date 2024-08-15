@@ -15,21 +15,25 @@ export default function Nav() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const { t, i18n } = useTranslation();
     const [isJapanese, setIsJapanese] = useState(() => localStorage.getItem('language') === 'ja');
-    const checkBox = document.getElementById('burger-checkbox');
+
+    useEffect(() => {
+        // Load language from localStorage or default to English
+        const language = localStorage.getItem('language') || 'en';
+        i18n.changeLanguage(language);
+    }, [i18n]);
 
     const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
     const toggleLanguage = (lang) => {
-        setTimeout(() => {
-            const newLang = lang === 'ja' ? 'ja' : 'en';
-            setIsJapanese(newLang === 'ja');
-            localStorage.setItem('language', newLang);
-            i18n.changeLanguage(newLang);
-        });
+        const newLang = lang === 'ja' ? 'ja' : 'en';
+        setIsJapanese(newLang === 'ja');
+        localStorage.setItem('language', newLang);
+        i18n.changeLanguage(newLang);
     };
 
     const handleMenuItemClick = () => {
         setIsMenuOpen(false);
+        const checkBox = document.getElementById('burger-checkbox');
         if (checkBox) {
             checkBox.checked = false;
         }
@@ -46,10 +50,9 @@ export default function Nav() {
         const handleScroll = () => {
             const currentScrollPos = window.scrollY;
             if (mainHeader) {
-                mainHeader.style.top = (currentScrollPos < (window.prevScrollpos || 0)) ? "0" : "-480px";
+                mainHeader.style.top = currentScrollPos < (window.prevScrollpos || 0) ? "0" : "-480px";
                 mainHeader.style.background = currentScrollPos === 0 ? 'transparent' : '#000';
                 mainHeader.style.filter = currentScrollPos === 0 ? 'none' : '';
-
                 window.prevScrollpos = currentScrollPos;
             }
         };
@@ -57,6 +60,7 @@ export default function Nav() {
         window.addEventListener('scroll', handleScroll);
 
         const handleClickOutside = (event) => {
+            const checkBox = document.getElementById('burger-checkbox');
             if (checkBox.current && !checkBox.current.contains(event.target)) {
                 setIsMenuOpen(false);
                 if (checkBox) {
@@ -76,13 +80,12 @@ export default function Nav() {
     return (
         <nav id="hide-header" className="lg:px-[6rem] px-5 py-3 bg-black z-30">
             <div className="mx-auto flex items-center justify-between py-2">
-
                 <div className="inline-flex items-center space-x-2">
                     <div className="flex justify-center my-auto">
-                        <img src={logo} alt="nav-logo" className="rounded-3xl lg:size-11 size-10 brightness-[120%] border-2 border-orange-700"/>
+                        <img src={logo} alt="nav-logo" className="rounded-3xl lg:size-11 size-10 brightness-[120%] border-2 border-orange-700" />
                         <div className="flex flex-col my-auto text-start text-white ml-3">
                             <h1 className="tracking-wider font-semibold lg:text-base text-[15px]">YJLS</h1>
-                            <p className="lg:text-xs text-[10px] tracking-wider ml-[1px]">Yume Japanese Language School</p>
+                            <p className="lg:text-xs text-[10px] tracking-wider ml-[1px]">{t('Yume')}</p>
                         </div>
                     </div>
                 </div>
@@ -139,7 +142,7 @@ export default function Nav() {
                                         activeClassName="active"
                                     >
                                         <span className="ml-3 text-base font-medium text-gray-700">
-                                            {item.name}
+                                            {t(item.name)}
                                         </span>
                                     </NavLink>
                                 ))}

@@ -1,11 +1,13 @@
 import React from "react";
-import { FaSmile, FaUsers, FaBook, FaChalkboardTeacher, FaGraduationCap } from 'react-icons/fa';
+import { FaUsers, FaBook, FaChalkboardTeacher, FaGraduationCap } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import "./hero.css";
 import landing from "../../../assets/landing-image.png";
 
 function Hero() {
     const navigate = useNavigate();
+    const { t } = useTranslation();
 
     const handleReadMoreClick = () => {
         window.scrollTo(0, 0);
@@ -33,17 +35,17 @@ function Hero() {
                 {/* Hero content */}
                 <div className="absolute px-4 sm:px-10 lg:pl-20 lg:pr-[45vw] top-[25%] left-0 z-20">
                     <h1 className="text-white font-bold text-3xl sm:text-4xl lg:text-[3.8rem] leading-tight sm:leading-snug lg:leading-[4.5rem]">
-                        Take The <span className="text-orange-400">Best</span> JLPT <br /><span className="text-orange-400">Courses</span> in Kolkata, Online & Offline
+                        {t('Take The')} <span className="text-orange-400">{t('Best')}</span> JLPT <br /><span className="text-orange-400">{t('Courses')}</span> {t('in Kolkata, Online & Offline')}
                     </h1>
                     <p className="text-white pt-4 text-base lg:text-lg leading-relaxed sm:leading-normal lg:leading-[1.8]">
-                        Boost your career with Yume Japanese Language School, the top choice in South Kolkata for learning Japanese. Our expert teachers make mastering the language fun and easy. Open up global opportunities and get the skills you need to succeed in today’s world.
+                        {t('H-des')}
                     </p>
 
                     <div className="flex flex-col sm:flex-row items-start sm:items-center mt-6 space-y-4 sm:space-y-0 sm:space-x-4">
-                        <button className="read-button shadow-xl" onClick={handleReadMoreClick}>Read More</button>
+                        <button className="read-button shadow-xl" onClick={handleReadMoreClick}>{t('Read More')}</button>
 
                         <button className="btn-con shadow-xl" onClick={handleContactNowClick}>
-                            Contact Now
+                            {t('Contact Now')}
                             <div className="arrow-wrapper-con">
                                 <div className="arrow-con"></div>
                             </div>
@@ -58,11 +60,12 @@ function Hero() {
 }
 
 function StatsSection() {
+    const { t } = useTranslation(); // Using the translation hook
     const stats = [
-        { icon: <FaGraduationCap size={38} />, number: '200 +', label: 'HAPPY STUDENTS' },
-        { icon: <FaUsers size={38} />, number: '50 +', label: '5 Stars Rating' },
-        { icon: <FaChalkboardTeacher size={38} />, number: '20 +', label: 'jlpt Courses' },
-        { icon: <FaBook size={38} />, number: '100 +', label: 'Lecture Classes' },
+        { icon: <FaGraduationCap size={38} />, number: '200 +', label: t('HAPPY STUDENTS') },
+        { icon: <FaUsers size={38} />, number: '50 +', label: t('5 Stars Rating') },
+        { icon: <FaChalkboardTeacher size={38} />, number: '20 +', label: t('jlpt Courses') },
+        { icon: <FaBook size={38} />, number: '100 +', label: t('Lecture Classes') },
     ];
 
     return (

@@ -1,26 +1,30 @@
+import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { FaPassport, FaBriefcase, FaUserGraduate, FaUniversity, FaLanguage, FaUserTie } from 'react-icons/fa';
 import pro from "../../../assets/program.png";
 
 const Program = () => {
+    const { t } = useTranslation();
+
     const features = [
-        { icon: FaPassport, title: "Student Visa", description: "Guidance and support for obtaining student visas to study abroad." },
-        { icon: FaBriefcase, title: "Job Visa", description: "Comprehensive assistance for acquiring job visas in various countries." },
-        { icon: FaUserGraduate, title: "TITP Visa", description: "Specialized training and guidance for the TITP visa program." },
-        { icon: FaUniversity, title: "Top Colleges and Universities", description: "Guidence towards leading global universities and colleges for higher education." },
-        { icon: FaLanguage, title: "JLPT and NAT", description: "Expert preparation for Japanese language proficiency tests like JLPT and NAT." },
-        { icon: FaUserTie, title: "Placement Preparation", description: "Personalized coaching to help you secure the best job opportunities." }
+        { icon: FaPassport, title: t("Student Visa"), description: t("Guidance and support for obtaining student visas to study abroad.") },
+        { icon: FaBriefcase, title: t("Job Visa"), description: t("Comprehensive assistance for acquiring job visas in various countries.") },
+        { icon: FaUserGraduate, title: t("TITP Visa"), description: t("Specialized training and guidance for the TITP visa program.") },
+        { icon: FaUniversity, title: t("Top Colleges and Universities"), description: t("Guidance towards leading global universities and colleges for higher education.") },
+        { icon: FaLanguage, title: t("JLPT and NAT"), description: t("Expert preparation for Japanese language proficiency tests like JLPT and NAT.") },
+        { icon: FaUserTie, title: t("Placement Preparation"), description: t("Personalized coaching to help you secure the best job opportunities.") }
     ];
 
     return (
         <div className="bg-gray-100 py-[120px]">
             <h2 className="lg:text-4xl text-[28px] font-bold text-center mb-10 lg:mb-20">
-                Our <span className="text-orange-500">Programs</span>
+                {t('Our')} <span className="text-orange-500">{t('Programs')}</span>
             </h2>
 
             <div className="flex flex-wrap items-center justify-center px-4 lg:px-20">
                 {/* Image Section */}
                 <div className="w-full lg:w-auto lg:scale-[1.5] lg:pr-10 lg:-translate-y-10 mb-16 lg:mb-0">
-                    <img src={pro} alt="Students" className="h-[45vh] mx-auto lg:mx-0" />
+                    <img src={pro} alt={t("Students")} className="h-[45vh] mx-auto lg:mx-0" />
                 </div>
 
                 {/* Text Section */}

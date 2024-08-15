@@ -2,59 +2,9 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useTranslation } from "react-i18next";
 
 import back2 from "../../../assets/testimonBg.jpg";
-
-const testimonials = [
-    {
-        name: "Sumita Mondal",
-        img_url: "https://lh3.googleusercontent.com/a-/ALV-UjU9hGMLGr8r7pcpVzOBclOuwRbOOvt_1eOoKxt4vBDwgz1-_w=w75-h75-p-rp-mo-br100",
-        stars: 5,
-        disc: `Best Japanese School. This is the best school if you want to learn Japanese. So without wasting time get admitted immediately!! 🇮🇳❤️🇯🇵`
-    },
-    {
-        name: "Mahak Mala Saren",
-        img_url: "https://lh3.googleusercontent.com/a-/ALV-UjXmcv_xkMDnMk00WmnzSExLms0TYbj6Hqj6mBrrTFgKLG5g3MU=w75-h75-p-rp-mo-br100",
-        stars: 5,
-        disc: `The teacher teaches with a lot of care and patience...`
-    },
-    {
-        name: "Aitijhya Saha",
-        img_url: "https://lh3.googleusercontent.com/a/ACg8ocKBlaqwERhErR29RQwiJL-piMa6yN8m2mj70T7ofAfuBSGExw=w75-h75-p-rp-mo-ba2-br100",
-        stars: 5,
-        disc: `Excellent school. The teachers are all very helpful...`
-    },
-    {
-        name: "Ramyani Das",
-        img_url: "https://lh3.googleusercontent.com/a-/ALV-UjVrOI7sLN59Ik8AKyVT5b94Wzz6HFRuYrFW1T33LaVquPVXw56a=w75-h75-p-rp-mo-br100",
-        stars: 5,
-        disc: `Extremely patient teacher. He has taught me with a lot of enthusiasm...`
-    },
-    {
-        name: "Srayashi Ghosh",
-        img_url: "https://lh3.googleusercontent.com/a-/ALV-UjU7ISGxKX472GwGcW89YD41VYBnrxMIUizsktnaK7yY67t-_UI=w75-h75-p-rp-mo-br100",
-        stars: 5,
-        disc: `Amazing place to begin with learning Japanese language...`
-    },
-    {
-        name: "Anju Maheshwari Sarkhel",
-        img_url: "https://lh3.googleusercontent.com/a-/ALV-UjVWvLIW54AN6Mo74iu_xImJEZtl5jcu6A-FJCCb_9LlcVqzR1M=w75-h75-p-rp-mo-br100",
-        stars: 5,
-        disc: `Awesome place. Teachers are amazing and easy going...`
-    },
-    {
-        name: "Bikram Mistry",
-        img_url: "https://lh3.googleusercontent.com/a/ACg8ocJYF5FZCnKpo5GMRlrTZZTRholUQX3EI3x_EpmQVxgyHppHvA=w75-h75-p-rp-mo-br100",
-        stars: 5,
-        disc: `Best language school.`
-    },
-    {
-        name: "Mousumi Sarkar",
-        img_url: "https://lh3.googleusercontent.com/a-/ALV-UjXXIT5mSQMPLmBCGVn-xQilDZYb_yV3OqzJ0rpgs6hN1WXeuqiLRA=w75-h75-p-rp-mo-br100",
-        stars: 5,
-        disc: `The teachers are really helpful.`
-    },
-];
 
 function SampleNextArrow(props) {
     const { className, style, onClick } = props;
@@ -79,6 +29,24 @@ function SamplePrevArrow(props) {
 }
 
 function Review() {
+    const { t } = useTranslation();
+
+    const testimonials = [
+        {
+            name: t("testimonials.Sumita Mondal"),
+            img_url: "https://lh3.googleusercontent.com/a-/ALV-UjU9hGMLGr8r7pcpVzOBclOuwRbOOvt_1eOoKxt4vBDwgz1-_w=w75-h75-p-rp-mo-br100",
+            stars: 5,
+            disc: t("testimonials.Sumita Mondal Disc")
+        },
+        {
+            name: t("testimonials.Mahak Mala Saren"),
+            img_url: "https://lh3.googleusercontent.com/a-/ALV-UjXmcv_xkMDnMk00WmnzSExLms0TYbj6Hqj6mBrrTFgKLG5g3MU=w75-h75-p-rp-mo-br100",
+            stars: 5,
+            disc: t("testimonials.Mahak Mala Saren Disc")
+        },
+        // Add other testimonials here
+    ];
+
     const settings = {
         dots: true,
         infinite: true,
@@ -118,10 +86,10 @@ function Review() {
                 <div className="container mx-auto relative z-20">
                     <div className="text-center">
                         <h2 className="lg:text-4xl text-[26px] font-bold mb-4 text-white">
-                            What <span className="text-orange-500">People</span> Say
+                            {t('What')} <span className="text-orange-500">{t('People')}</span> {t('Say')}
                         </h2>
                         <p className="text-gray-100 mb-8">
-                            Student and parent testimonials sharing their experiences and opinions.
+                            {t('p-des')}
                         </p>
                     </div>
 

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 // Photography 
 import Photo1 from "../../../assets/galary/photo1.jpg";
@@ -73,6 +74,7 @@ const images = {
 const categories = ['All', 'Photography', 'Students', 'Class'];
 
 const PhotoGallery = () => {
+  const { t } = useTranslation();
   const [activeCategory, setActiveCategory] = useState('All');
   const [visibleCount, setVisibleCount] = useState(8); // Initial number of images to display
   const [isTransitioning, setIsTransitioning] = useState(false);
@@ -97,12 +99,12 @@ const PhotoGallery = () => {
   const currentImages = images[activeCategory].slice(0, visibleCount);
 
   return (
-    <div className="bg-gray-100 p-4 md:p-8 pt-[120px] pb-[120px]">
+    <div className="bg-gray-100 px-4 md:px-8 py-24 lg:py-32">
       <h2 className="text-2xl lg:text-4xl font-bold text-center mb-4">
-        Photo <span className="text-orange-500">Gallery</span>
+        {t('Photo Gallery')}
       </h2>
       <p className="text-center text-gray-600 mb-8">
-        Explore our diverse gallery across various categories.
+        {t('Explore our diverse gallery across various categories.')}
       </p>
 
       {/* Category Buttons */}
@@ -115,7 +117,7 @@ const PhotoGallery = () => {
               ${activeCategory === category ? 'bg-orange-500 text-white' : 'bg-white text-gray-700'} 
               hover:bg-orange-500 hover:text-white`}
           >
-            {category}
+            {t(category)}
           </button>
         ))}
       </div>
@@ -143,7 +145,7 @@ const PhotoGallery = () => {
             onClick={handleSeeMore}
             className="px-6 py-2 rounded-lg font-semibold bg-orange-500 text-white shadow-md hover:bg-orange-600"
           >
-            {visibleCount >= images[activeCategory].length ? 'See Less' : 'See More'}
+            {visibleCount >= images[activeCategory].length ? t('See Less') : t('See More')}
           </button>
         </div>
       )}
