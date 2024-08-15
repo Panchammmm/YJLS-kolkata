@@ -149,7 +149,7 @@ export default function Nav() {
                                 <select
                                     value={isJapanese ? 'ja' : 'en'}
                                     onChange={handleLanguageChange}
-                                    className="text-gray-500 cursor-pointer bg-transparent border-none p-1"
+                                    className="text-orange-600 cursor-pointer bg-transparent border-none p-1"
                                 >
                                     <option value="en" className="text-black">ENG</option>
                                     <option value="ja" className="text-black">日本語</option>

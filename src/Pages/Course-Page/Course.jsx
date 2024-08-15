@@ -19,7 +19,7 @@ export default function Course() {
     return (
         <div>
             <div className="bg-black">
-                <img src={coursebg} alt="course"></img>
+                <img src={coursebg} alt="course" className="object-cover w-full h-[200px] sm:h-[400px] lg:h-[350px]"></img>
             </div>
 
             <CourseList />
@@ -146,7 +146,7 @@ const CourseList = () => {
             setActiveCategory(category);
             setVisibleCourses(maxVisibleCourses);
             setIsTransitioning(false);
-        }, 300); // Adjust timing to match transition duration
+        }, 300);
     };
 
     const toggleVisibility = () => {
@@ -158,7 +158,7 @@ const CourseList = () => {
     };
 
     const currentCourses = courses[activeCategory].slice(0, visibleCourses);
-    
+
     const navigate = useNavigate();
 
     const handleContactClick = () => {
@@ -167,21 +167,21 @@ const CourseList = () => {
     };
 
     return (
-        <div className="bg-gray-100 p-8 pt-[100px] pb-[120px]">
-            <h2 className="text-3xl font-bold text-center mb-3">
+        <div className="bg-gray-100 lg:pt-[100px] pt-20 pb-[120px] p-4 sm:p-6 lg:p-8">
+            <h2 className="text-2xl sm:text-3xl font-bold capitalize text-center mb-4">
                 JLPT <span className="text-orange-500">Courses</span>
             </h2>
-            <p className="text-center text-gray-600 mb-8">
+            <p className="text-center text-gray-500 mb-7 sm:mb-8 md:mb-10 px-2 sm:px-4">
                 Discover our comprehensive courses tailored to various proficiency levels.
             </p>
 
-            <div className="flex justify-center mb-6">
+            <div className="flex flex-wrap justify-center mb-6 sm:mb-8">
                 {Object.keys(courses).map((category) => (
                     <button
                         key={category}
                         onClick={() => handleCategoryChange(category)}
                         className={`${activeCategory === category ? 'bg-orange-500 text-white' : 'bg-white text-gray-700'
-                            } px-4 py-2 mx-2 rounded-lg font-semibold shadow-md hover:bg-orange-500 hover:text-white`}
+                            } px-3 sm:px-4 py-2 mx-1 sm:mx-2 my-1 sm:my-0 rounded-lg font-semibold shadow-md hover:bg-orange-500 hover:text-white`}
                     >
                         {category}
                     </button>
@@ -189,29 +189,29 @@ const CourseList = () => {
             </div>
 
             <div
-                className={`flex justify-center transition-opacity duration-300 ease-in-out ${isTransitioning ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0'
+                className={`flex justify-center mx-4 transition-opacity duration-300 ease-in-out ${isTransitioning ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0'
                     }`}
             >
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 place-items-center">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 place-items-center">
                     {currentCourses.map((course, index) => (
-                        <div key={index} className="relative mt-8 flex w-80 flex-col rounded-xl bg-white text-gray-700 shadow-xl">
-                            <div className="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl">
+                        <div key={index} className="relative mt-8 flex w-full sm:w-72 lg:w-80 flex-col rounded-xl bg-white text-gray-700 shadow-xl">
+                            <div className="relative mx-4 -mt-6 h-32 sm:h-40 lg:h-48 overflow-hidden rounded-xl">
                                 <img
                                     src={course.image}
                                     alt={`Course: ${course.name}`}
                                     className="object-cover w-full h-full"
                                 />
                             </div>
-                            <div className="p-5">
+                            <div className="p-4 sm:p-5">
                                 <div className="flex justify-between my-auto">
-                                    <h6 className="bg-green-400 text-white text-sm w-fit rounded-[5px] px-3 py-1 mb-3 font-semibold">New</h6>
+                                    <h6 className="bg-green-400 text-white text-xs sm:text-sm w-fit rounded-[5px] px-2 sm:px-3 py-1 mb-3 font-semibold">New</h6>
                                     <div className="flex mr-2 text-[#9da4af] h-fit p-1 rounded-[8px]">
                                         <FaHourglassEnd />
-                                        <span className="text-sm ml-1">{course.duration}</span>
+                                        <span className="text-xs sm:text-sm ml-1">{course.duration}</span>
                                     </div>
                                 </div>
 
-                                <h5 className="text-xl font-semibold leading-snug text-blue-gray-900">
+                                <h5 className="text-lg sm:text-xl font-semibold leading-snug text-blue-gray-900">
                                     {course.name}
                                 </h5>
 
@@ -244,23 +244,23 @@ const CourseList = () => {
                                     ))}
                                 </div>
 
-                                <p className="flex mt-2 text-base font-light leading-relaxed text-gray-700 line-clamp-3">
+                                <p className="flex mt-2 text-sm sm:text-base font-light leading-relaxed text-gray-700 line-clamp-3">
                                     {course.description}
                                 </p>
 
                                 <div className="grid mt-4 mb-4 ml-1">
-                                    <div className="leading-4 ml-2 text-sm font-medium text-gray-400">
-                                        <span className="line-through mr-4">{course.originalPrice} /-</span>
+                                    <div className="leading-4 ml-2 text-xs sm:text-sm font-medium text-gray-400">
+                                        <span className="line-through mr-2 sm:mr-4">{course.originalPrice} /-</span>
                                     </div>
                                     <div className="flex items-center">
-                                        <span className="text-orange-600 text-lg font-semibold">{course.price} /-</span>
-                                        <span className="bg-yellow-200 text-yellow-800 px-2 py-1 ml-3 rounded-full text-sm">{course.discount}% Off</span>
+                                        <span className="text-orange-600 text-sm sm:text-lg font-semibold">{course.price} /-</span>
+                                        <span className="bg-yellow-200 text-yellow-800 px-2 py-1 ml-3 rounded-full text-xs sm:text-sm">{course.discount}% Off</span>
                                     </div>
                                 </div>
 
                                 <button
                                     type="button"
-                                    className="select-none rounded-lg bg-orange-500 py-3 px-6 text-center font-bold text-white shadow-md transition-all hover:shadow-lg hover:shadow-yellow-500/40 focus:opacity-85 active:opacity-85 disabled:pointer-events-none disabled:opacity-50"
+                                    className="select-none rounded-lg bg-orange-500 py-2 sm:py-3 px-4 sm:px-6 text-center font-bold text-white shadow-md transition-all hover:shadow-lg hover:shadow-yellow-500/40 focus:opacity-85 active:opacity-85 disabled:pointer-events-none disabled:opacity-50"
                                     onClick={handleContactClick}
                                 >
                                     Contact Now
@@ -272,12 +272,12 @@ const CourseList = () => {
             </div>
 
             {courses[activeCategory].length > maxVisibleCourses && (
-                <div className="flex justify-center mt-8">
+                <div className="flex justify-center mt-6 sm:mt-8">
                     <button
                         onClick={toggleVisibility}
                         className="bg-orange-500 text-white px-4 py-2 rounded-lg font-semibold shadow-md hover:bg-orange-600"
                     >
-                        {visibleCourses === maxVisibleCourses ? 'See More' : 'See Less'}
+                        {visibleCourses === maxVisibleCourses ? 'See All' : 'Show Less'}
                     </button>
                 </div>
             )}
