@@ -2,7 +2,6 @@ import React from "react";
 import { FaSmile, FaUsers, FaBook, FaChalkboardTeacher, FaGraduationCap } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 import "./hero.css";
-
 import landing from "../../../assets/landing-image.png";
 
 function Hero() {
@@ -21,7 +20,7 @@ function Hero() {
     return (
         <div>
             {/* Background image */}
-            <div className="relative w-full h-[110vh] bg-black">
+            <div className="relative w-full h-[95vh] lg:h-[110vh] bg-black">
                 <img
                     src={landing}
                     loading="lazy"
@@ -29,21 +28,21 @@ function Hero() {
                     className="w-full h-full object-cover blur-[0.7px]"
                 />
 
-                <div className="absolute inset-0 bg-black opacity-[0.60] z-10"></div> {/* dark overlay */}
+                <div className="absolute inset-0 bg-black opacity-60 z-10"></div> {/* dark overlay */}
 
                 {/* Hero content */}
-                <div className="absolute pl-20 lg:pr-[45vw] top-[32%] left-0 z-20">
-                    <h1 className="text-white font-[700] text-[3.8rem] leading-[4.5rem]">
-                        Take The <span className="text-orange-400">Best</span> JLPT <br /><span className="text-orange-400">Teachings</span> in Kolkata, Online & Offline
+                <div className="absolute px-4 sm:px-10 lg:pl-20 lg:pr-[45vw] top-[25%] left-0 z-20">
+                    <h1 className="text-white font-bold text-3xl sm:text-4xl lg:text-[3.8rem] leading-tight sm:leading-snug lg:leading-[4.5rem]">
+                        Take The <span className="text-orange-400">Best</span> JLPT <br /><span className="text-orange-400">Courses</span> in Kolkata, Online & Offline
                     </h1>
-                    <p className="text-white pl-3 pt-4 tracking-[0.7px]">
-                        Elevate Your Career to Unprecedented Heights at Yume Japanese Language School – South Kolkata’s Premier Institution for Advanced Japanese Language Education. Engage with our Expert Faculty to Master the Language, Open Global Doors, and Equip Yourself with the Essential Skills and Knowledge to Excel in Today's Competitive Landscape.
+                    <p className="text-white pt-4 text-base lg:text-lg leading-relaxed sm:leading-normal lg:leading-[1.8]">
+                        Boost your career with Yume Japanese Language School, the top choice in South Kolkata for learning Japanese. Our expert teachers make mastering the language fun and easy. Open up global opportunities and get the skills you need to succeed in today’s world.
                     </p>
 
-                    <div className="flex pl-3 mt-6">
+                    <div className="flex flex-col sm:flex-row items-start sm:items-center mt-6 space-y-4 sm:space-y-0 sm:space-x-4">
                         <button className="read-button shadow-xl" onClick={handleReadMoreClick}>Read More</button>
 
-                        <button className="btn-con ml-4 shadow-xl" onClick={handleContactNowClick}>
+                        <button className="btn-con shadow-xl" onClick={handleContactNowClick}>
                             Contact Now
                             <div className="arrow-wrapper-con">
                                 <div className="arrow-con"></div>
@@ -67,13 +66,13 @@ function StatsSection() {
     ];
 
     return (
-        <div className="bg-black text-white pt-[5rem] pb-16 px-[20vw]">
-            <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 text-center">
+        <div className="bg-black text-white py-16 px-4 sm:px-12 md:px-20 lg:px-[20vw]">
+            <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                 {stats.map((stat, index) => (
                     <div key={index} className="flex flex-col items-center">
                         <div className="text-orange-300 mb-4">{stat.icon}</div>
-                        <div className="text-xl font-bold">{stat.number}</div>
-                        <div className="text-sm mt-2 uppercase">{stat.label}</div>
+                        <div className="text-lg sm:text-xl font-bold">{stat.number}</div>
+                        <div className="text-xs sm:text-sm mt-1 uppercase">{stat.label}</div>
                     </div>
                 ))}
             </div>
