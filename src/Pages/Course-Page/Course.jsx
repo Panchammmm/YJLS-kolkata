@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FaHourglassEnd } from 'react-icons/fa';
+import { useTranslation } from 'react-i18next';
 import coursebg from "../../assets/page-banner/courses.png";
 
 import MasterN3 from "../../assets/Courses/n3.jpg";
@@ -16,6 +17,8 @@ import CrashN5 from "../../assets/Courses/crash-n5.jpg";
 import SpN5 from "../../assets/Courses/sp-n5.jpg";
 
 export default function Course() {
+    const { t } = useTranslation();
+
     return (
         <div>
             <div className="bg-black">
@@ -30,30 +33,30 @@ export default function Course() {
 const N3Courses = [
     {
         image: MasterN3,
-        name: 'Mastering JLPT N3',
-        duration: '6 Months',
+        name: 'course.N3.mastering',
+        duration: 'course.duration.6_months',
         rating: 4.5,
-        description: 'Comprehensive curriculum covering reading, listening, and grammar for intermediate Japanese learners.',
+        description: 'course.N3.mastering_description',
         price: 6000,
         originalPrice: 9000,
         discount: 33
     },
     {
         image: CrashN3,
-        name: 'N3 Crash Course',
-        duration: '3 Months',
+        name: 'course.N3.crash',
+        duration: 'course.duration.3_months',
         rating: 4.6,
-        description: 'Intensive preparation focusing on essential grammar and vocabulary for the JLPT N3 exam.',
+        description: 'course.N3.crash_description',
         price: 999,
         originalPrice: 1600,
         discount: 37
     },
     {
         image: SpN3,
-        name: 'N3 Special',
-        duration: '3 Months',
+        name: 'course.N3.special',
+        duration: 'course.duration.3_months',
         rating: 4.8,
-        description: 'Specialized course offering targeted practice and expert guidance for the JLPT N3 exam.',
+        description: 'course.N3.special_description',
         price: 999,
         originalPrice: 1200,
         discount: 16
@@ -63,30 +66,30 @@ const N3Courses = [
 const N4Courses = [
     {
         image: MasterN4,
-        name: 'Mastering JLPT N4',
-        duration: '6 Months',
+        name: 'course.N4.mastering',
+        duration: 'course.duration.6_months',
         rating: 4.8,
-        description: 'Detailed study of JLPT N4 materials, focusing on vocabulary, grammar, and kanji for advanced beginners.',
+        description: 'course.N4.mastering_description',
         price: 9000,
         originalPrice: 12000,
         discount: 25
     },
     {
         image: CrashN4,
-        name: 'N4 Crash Course',
-        duration: '3 Months',
+        name: 'course.N4.crash',
+        duration: 'course.duration.3_months',
         rating: 4.6,
-        description: 'Fast-paced course designed for quick and effective preparation for the JLPT N4 exam.',
+        description: 'course.N4.crash_description',
         price: 899,
         originalPrice: 1400,
         discount: 35
     },
     {
         image: SpN4,
-        name: 'N4 Special',
-        duration: '3 Months',
+        name: 'course.N4.special',
+        duration: 'course.duration.3_months',
         rating: 4.5,
-        description: 'Specialized practice tailored for JLPT N4 with expert support to ensure successful results.',
+        description: 'course.N4.special_description',
         price: 999,
         originalPrice: 1200,
         discount: 16
@@ -96,30 +99,30 @@ const N4Courses = [
 const N5Courses = [
     {
         image: MasterN5,
-        name: 'Mastering JLPT N5',
-        duration: '6 Months',
+        name: 'course.N5.mastering',
+        duration: 'course.duration.6_months',
         rating: 4.7,
-        description: 'Foundational course covering basic aspects of Japanese including vocabulary, grammar, and kanji.',
+        description: 'course.N5.mastering_description',
         price: 6000,
         originalPrice: 9000,
         discount: 33
     },
     {
         image: CrashN5,
-        name: 'N5 Crash Course',
-        duration: '3 Months',
+        name: 'course.N5.crash',
+        duration: 'course.duration.3_months',
         rating: 4.5,
-        description: 'Intensive program for rapid preparation of the JLPT N5 exam, focusing on key elements of the language.',
+        description: 'course.N5.crash_description',
         price: 799,
         originalPrice: 1000,
         discount: 20
     },
     {
         image: SpN5,
-        name: 'N5 Special',
-        duration: '3 Months',
+        name: 'course.N5.special',
+        duration: 'course.duration.3_months',
         rating: 4.8,
-        description: 'Special course with in-depth materials and personalized support to excel in the JLPT N5 exam.',
+        description: 'course.N5.special_description',
         price: 999,
         originalPrice: 1200,
         discount: 16
@@ -135,6 +138,7 @@ const courses = {
 };
 
 const CourseList = () => {
+    const { t } = useTranslation();
     const [activeCategory, setActiveCategory] = useState('All');
     const [visibleCourses, setVisibleCourses] = useState(6);
     const [isTransitioning, setIsTransitioning] = useState(false);
@@ -169,10 +173,10 @@ const CourseList = () => {
     return (
         <div className="bg-gray-100 lg:pt-[100px] pt-20 pb-28 lg:pb-28 p-4 sm:p-6 lg:p-8">
             <h2 className="text-2xl sm:text-3xl font-bold capitalize text-center mb-4">
-                JLPT <span className="text-orange-500">Courses</span>
+                JLPT <span className="text-orange-500">{t('course')}</span>
             </h2>
             <p className="text-center text-gray-500 mb-7 sm:mb-8 md:mb-10 px-2 sm:px-4">
-                Discover our comprehensive courses tailored to various proficiency levels.
+                {t('Discover our comprehensive courses tailored to various proficiency levels.')}
             </p>
 
             <div className="flex flex-wrap justify-center mb-6 sm:mb-8">
@@ -183,7 +187,7 @@ const CourseList = () => {
                         className={`${activeCategory === category ? 'bg-orange-500 text-white' : 'bg-white text-gray-700'
                             } px-3 sm:px-4 py-2 mx-1 sm:mx-2 my-1 sm:my-0 rounded-lg font-semibold shadow-md hover:bg-orange-500 hover:text-white`}
                     >
-                        {category}
+                        {t(category)}
                     </button>
                 ))}
             </div>
@@ -196,19 +200,19 @@ const CourseList = () => {
                     {currentCourses.map((course, index) => (
                         <div key={index} className="relative mt-8 flex w-full sm:w-72 lg:w-80 flex-col rounded-xl bg-white text-gray-700 shadow-xl">
                             <div className="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl">
-                                <img src={course.image} alt={course.title} className="w-full h-full object-cover" />
+                                <img src={course.image} alt={t(course.name)} className="w-full h-full object-cover" />
                             </div>
                             <div className="p-5">
                                 <div className="flex justify-between my-auto">
-                                    <h6 className="bg-green-400 text-white text-sm w-fit rounded-[5px] px-3 py-1 mb-3 font-semibold">New</h6>
+                                    <h6 className="bg-green-400 text-white text-sm w-fit rounded-[5px] px-3 py-1 mb-3 font-semibold">{t('New')}</h6>
                                     <div className="flex mr-2 text-[#9da4af] h-fit p-1 rounded-[8px]">
                                         <FaHourglassEnd />
-                                        <span className="text-sm ml-1">{course.duration}</span>
+                                        <span className="text-sm ml-1">{t(course.duration)}</span>
                                     </div>
                                 </div>
 
                                 <h5 className="text-xl font-semibold leading-snug text-blue-gray-900">
-                                    {course.title}
+                                    {t(course.name)}
                                 </h5>
 
                                 <div className="flex flex-row">
@@ -239,7 +243,7 @@ const CourseList = () => {
                                 </div>
 
                                 <p className="flex mt-2 text-base font-light leading-relaxed text-gray-700 line-clamp-3">
-                                    {course.description}
+                                    {t(course.description)}
                                 </p>
 
                                 <div className="grid mt-4 mb-4 ml-1">
@@ -248,7 +252,7 @@ const CourseList = () => {
                                     </div>
                                     <div className="flex items-center">
                                         <span className="text-orange-600 text-lg font-semibold">{course.price} /-</span>
-                                        <span className="bg-yellow-200 text-yellow-800 text-sm px-2 py-1 ml-3 rounded-full">{course.discount}% Off</span>
+                                        <span className="bg-yellow-200 text-yellow-800 text-sm px-2 py-1 ml-3 rounded-full">{course.discount}% {t('Off')}</span>
                                     </div>
                                 </div>
 
@@ -257,7 +261,7 @@ const CourseList = () => {
                                     className="select-none rounded-lg bg-orange-500 py-3 mb-1 lg:mb-0 px-6 text-center font-bold text-white shadow-md transition-all hover:shadow-lg hover:shadow-yellow-500/40 focus:opacity-85 active:opacity-85 disabled:pointer-events-none disabled:opacity-50"
                                     onClick={handleContactClick}
                                 >
-                                    Contact Now
+                                    {t('Contact Us')}
                                 </button>
                             </div>
                         </div>
@@ -271,10 +275,10 @@ const CourseList = () => {
                         onClick={toggleVisibility}
                         className="bg-orange-500 text-white px-4 py-2 rounded-lg font-semibold shadow-md hover:bg-orange-600"
                     >
-                        {visibleCourses === maxVisibleCourses ? 'See All' : 'Show Less'}
+                        {visibleCourses === maxVisibleCourses ? t('Show More') : t('Show Less')}
                     </button>
                 </div>
             )}
         </div>
-    );
-};
+    )
+}

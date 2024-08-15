@@ -3,12 +3,15 @@ import { FaUser, FaEnvelope, FaPaperPlane, FaPhone, FaWhatsapp, FaMapMarkerAlt }
 import { useForm } from 'react-hook-form';
 import useWeb3Forms from "@web3forms/react";
 import contactbg from "../../assets/page-banner/contact.png";
+import { useTranslation } from 'react-i18next';
 
 export default function Contact() {
+    const { t } = useTranslation();
+
     return (
         <section>
             <div className="bg-black">
-                <img src={contactbg} alt="contact" className="object-cover w-full h-[200px] sm:h-[400px] lg:h-[350px]" />
+                <img src={contactbg} alt={t('contact.alt_image')} className="object-cover w-full h-[200px] sm:h-[400px] lg:h-[350px]" />
             </div>
             <ContactForm />
         </section>
@@ -50,10 +53,16 @@ const ContactForm = () => {
         onSubmit({ ...formData, subject });
     };
 
+    const { t } = useTranslation();
+
     return (
         <div id="contact" className="lg:pt-[100px] pt-20 pb-[120px] bg-gray-100">
-            <h1 className="text-2xl md:text-3xl font-bold capitalize text-center mb-4">Send Your <span className="text-orange-500">Enquiries</span></h1>
-            <p className="text-center text-gray-500 mb-10 px-4">Stay connected and reach out with any inquiries you may have.</p>
+            <h1 className="text-2xl md:text-3xl font-bold capitalize text-center mb-4">
+                {t('Send_your')} <span className="text-orange-500">{t('Enquiries')}</span>
+            </h1>
+            <p className="text-center text-gray-500 mb-10 px-4">
+                {t('contact.subtitle')}
+            </p>
 
             <div className="flex flex-col lg:flex-row justify-center gap-14 px-4 lg:px-0">
                 <div className="w-full h-full lg:w-[40%] my-auto bg-white shadow-lg rounded-lg p-8 lg:pt-10">
@@ -62,7 +71,7 @@ const ContactForm = () => {
                             <FaUser className="text-gray-400 mr-3" />
                             <input
                                 type="text"
-                                placeholder="Your full name.."
+                                placeholder={t('contact.form.name_placeholder')}
                                 {...register("name")}
                                 required
                                 className="w-full outline-none"
@@ -72,7 +81,7 @@ const ContactForm = () => {
                             <FaEnvelope className="text-gray-400 mr-3" />
                             <input
                                 type="email"
-                                placeholder="Your email address.."
+                                placeholder={t('contact.form.email_placeholder')}
                                 {...register("email", { required: true })}
                                 className="w-full outline-none"
                             />
@@ -81,7 +90,7 @@ const ContactForm = () => {
                             <FaPhone className="text-gray-400 mr-3" />
                             <input
                                 type="tel"
-                                placeholder="Your phone number.."
+                                placeholder={t('contact.form.phone_placeholder')}
                                 {...register("phone")}
                                 className="w-full outline-none"
                             />
@@ -89,14 +98,14 @@ const ContactForm = () => {
                         <div className="flex items-start border-b border-gray-300 pb-2">
                             <FaPaperPlane className="text-gray-400 mr-3 mt-1 lg:mt-[3px]" />
                             <textarea
-                                placeholder="Message.."
+                                placeholder={t('contact.form.message_placeholder')}
                                 {...register("message", { required: true })}
                                 className="w-full outline-none"
                                 rows="4"
                             />
                         </div>
                         <button type="submit" className="w-full py-2 px-4 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition duration-200">
-                            Submit
+                            {t('contact.form.submit_button')}
                         </button>
                     </form>
 
@@ -106,7 +115,7 @@ const ContactForm = () => {
                             role="alert"
                             aria-live="polite"
                         >
-                            {result || (isSuccess ? 'Thank you! Your message has been sent.' : 'Oops! Something went wrong. Please try again.')}
+                            {result || (isSuccess ? t('contact.form.success_message') : t('contact.form.error_message'))}
                         </div>
                     )}
                 </div>
@@ -118,12 +127,14 @@ const ContactForm = () => {
 };
 
 const Address = () => {
+    const { t } = useTranslation();
+
     return (
         <div className="w-full lg:w-1/3 flex flex-col gap-6">
             <div className="flex">
                 <FaWhatsapp className="text-orange-500 mr-3 size-8 mt-1" />
                 <div>
-                    <h3 className="font-semibold">Whatsapp</h3>
+                    <h3 className="font-semibold">{t('contact.address.whatsapp')}</h3>
                     <a href="https://wa.me/918013072585" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-orange-500 transition duration-200">
                         +91 80130 72585
                     </a>
@@ -137,7 +148,7 @@ const Address = () => {
             <div className="flex">
                 <FaEnvelope className="text-orange-500 mr-4 size-7 mt-1" />
                 <div>
-                    <h3 className="font-semibold">Email</h3>
+                    <h3 className="font-semibold">{t('contact.address.email')}</h3>
                     <a href="mailto:Yumejapaneseschool@gmail.com" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-orange-500 transition duration-200">
                         Yumejapaneseschool@gmail.com
                     </a>
@@ -147,7 +158,7 @@ const Address = () => {
             <div className="flex">
                 <FaMapMarkerAlt className="text-orange-500 mr-4 size-11 lg:size-8 lg:mt-1" />
                 <div>
-                    <h3 className="font-semibold">Location</h3>
+                    <h3 className="font-semibold">{t('contact.address.location')}</h3>
                     <a href="https://maps.app.goo.gl/NyC6MFCtXFqLYXfz5" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-orange-500 transition duration-200">
                         Mali Pukria, near IILDS Hospital, Rajpur Sonarpur, Kolkata, West Bengal 700150
                     </a>
@@ -163,14 +174,4 @@ const Address = () => {
             ></iframe>
         </div>
     )
-}
-
-const Arrow = () => {
-    return (
-        <span className="inline-block ml-2">
-            <svg width="10" xmlns="http://www.w3.org/2000/svg" fill="#555" viewBox="0 0 14 15">
-                <path d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"></path>
-            </svg>
-        </span>
-    );
 }
