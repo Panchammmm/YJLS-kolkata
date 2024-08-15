@@ -146,7 +146,7 @@ function CourseSection() {
 
             <div className="flex justify-center mt-28">
                 <button
-                    className="group hover:brightness-110 font-bold py-3 px-6 rounded-xl bg-gradient-to-r from-orange-300 to-orange-600 text-white flex items-center justify-center transition-all duration-300"
+                    className="group hover:brightness-110 font-bold text-sm lg:text-base py-3 px-4 lg:px-6 rounded-xl bg-gradient-to-r from-orange-300 to-orange-600 text-white flex items-center justify-center transition-all duration-300"
                     onClick={handleCourseClick}
                 >
                     More Courses

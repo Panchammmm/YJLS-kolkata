@@ -117,7 +117,7 @@ function Review() {
                 <div className="absolute inset-0 bg-black opacity-[0.78] z-10"></div> {/* dark overlay */}
                 <div className="container mx-auto relative z-20">
                     <div className="text-center">
-                        <h2 className="text-4xl font-bold mb-4 text-white">
+                        <h2 className="lg:text-4xl text-[26px] font-bold mb-4 text-white">
                             What <span className="text-orange-500">People</span> Say
                         </h2>
                         <p className="text-gray-100 mb-8">
@@ -130,7 +130,7 @@ function Review() {
                             {testimonials.map((testimonial, index) => (
                                 <div
                                     key={index}
-                                    className="bg-gray-300 p-6 rounded-lg shadow-lg transition duration-300 transform max-w-[390px] h-[300px] text-center"
+                                    className="bg-gray-300 p-4 md:p-6 rounded-lg shadow-lg transition duration-300 transform max-w-[390px] h-[300px] text-center"
                                 >
                                     <img
                                         src={testimonial.img_url}

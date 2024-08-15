@@ -31,7 +31,7 @@ const Program = () => {
                                 <feature.icon size={35} className="text-orange-500 text-3xl mr-4" />
                                 <div>
                                     <h4 className="font-bold text-lg">{feature.title}</h4>
-                                    <p className="text-gray-700">{feature.description}</p>
+                                    <p className="text-gray-500">{feature.description}</p>
                                 </div>
                             </div>
                         ))}
