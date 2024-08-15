@@ -154,5 +154,20 @@
       "email": "Email",
       "location": "Location"
     }
+  },
+  "Footer": {
+    "title": "Yume Japanese Language School",
+    "description": "Yume Japanese Language School in South Kolkata offers top-notch Japanese education with experienced instructors and a tailored curriculum for all levels.",
+    "address": "Mali Pukria, Rajpur Sonarpur, Kolkata, West Bengal 700150",
+    "phone1": "+91 80130 72585",
+    "phone2": "+91 87776 71272",
+    "social": {
+      "facebook": "Facebook",
+      "messenger": "Messenger",
+      "whatsapp": "WhatsApp",
+      "instagram": "Instagram"
+    },
+    "copyright": "Copyright © {{year}}. All Rights Reserved.",
+    "createdBy": "Created by {{name}}."
   }
 }

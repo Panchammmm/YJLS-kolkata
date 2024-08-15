@@ -1,9 +1,11 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { FaFacebookF, FaWhatsapp, FaInstagram, FaFacebookMessenger } from 'react-icons/fa';
 import siteLogo from "../assets/site-logo-new.png";
 import backgroundImage from "../assets/world-map.png";
 
 const Footer = () => {
+    const { t } = useTranslation();
     const currentYear = new Date().getFullYear();
 
     return (
@@ -25,13 +27,13 @@ const Footer = () => {
                         className="rounded-full mx-auto w-20 h-20 sm:w-24 sm:h-24 lg:w-24 lg:h-24 mb-4 border-[3.2px] border-gray-600"
                     />
                     <h1 className="text-2xl sm:text-3xl font-bold text-orange-600">
-                        Yume Japanese Language School
+                        {t('Footer.title')}
                     </h1>
                 </div>
 
                 {/* Description */}
                 <p className="max-w-xl mx-auto mb-8 text-sm sm:text-base lg:text-lg">
-                    Yume Japanese Language School in South Kolkata offers top-notch Japanese education with experienced instructors and a tailored curriculum for all levels.
+                    {t('Footer.description')}
                 </p>
 
                 {/* Divider */}
@@ -39,9 +41,9 @@ const Footer = () => {
 
                 {/* Contact Information */}
                 <address className="not-italic mb-8 text-sm sm:text-base lg:text-lg">
-                    Mali Pukria, Rajpur Sonarpur, Kolkata, West Bengal 700150 
-                    <br/>
-                    +91 80130 72585 | +91 87776 71272
+                    {t('Footer.address')}
+                    <br />
+                    {t('Footer.phone1')} | {t('Footer.phone2')}
                 </address>
 
                 {/* Social Icons */}
@@ -49,24 +51,28 @@ const Footer = () => {
                     <a
                         onClick={() => window.open("https://www.facebook.com/profile.php?id=100084716997973&sk=photos&locale=hi_IN", "_blank")}
                         className="p-2 sm:p-3 rounded-full bg-gray-800 hover:bg-orange-700 transition-colors"
+                        aria-label={t('Footer.social.facebook')}
                     >
                         <FaFacebookF size={18} />
                     </a>
                     <a
                         onClick={() => window.open("https://www.facebook.com/messages/t/107979948705270", "_blank")}
                         className="p-2 sm:p-3 rounded-full bg-gray-800 hover:bg-orange-700 transition-colors"
+                        aria-label={t('Footer.social.messenger')}
                     >
                         <FaFacebookMessenger size={18} />
                     </a>
                     <a
                         onClick={() => window.open("https://api.whatsapp.com/send?phone=%2B918013072585&data_filter_required=ARBHHFtaUwdrkJ3LOSOjkrBPMiUVFJfMxVQnj8awZER3y_APKIxw-LNF3ZKPR5-dyDRBDznJ_3qk2BwOkpSYMiYj_fOA6eRe6YQq8IaANpJdU1HelnQyNjQBv6CcQc9gEivqCYjiN8lao7cH6Ay0ku23_Q&source=FB_Page&app=facebook&entry_point=page_cta", "_blank")}
                         className="p-2 sm:p-3 rounded-full bg-gray-800 hover:bg-orange-700 transition-colors"
+                        aria-label={t('Footer.social.whatsapp')}
                     >
                         <FaWhatsapp size={18} />
                     </a>
                     <a
                         onClick={() => window.open("https://www.instagram.com/suntugaye?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==", "_blank")}
                         className="p-2 sm:p-3 rounded-full bg-gray-800 hover:bg-orange-700 transition-colors"
+                        aria-label={t('Footer.social.instagram')}
                     >
                         <FaInstagram size={18} />
                     </a>
@@ -78,11 +84,11 @@ const Footer = () => {
                 {/* Copyright */}
                 <div className="flex flex-col sm:flex-row justify-center sm:justify-between space-y-3 sm:space-y-0 text-sm sm:text-base lg:text-lg">
                     <p>
-                        Copyright © {currentYear}. All Rights Reserved.
+                        {t('Footer.copyright', { year: currentYear })}
                     </p>
                     <div>
                         <a target="_blank" href="https://pancham-portfolio.netlify.app/">
-                            Created by <span className="text-gray-500">Pancham Sardar</span>.
+                            {t('Footer.createdBy', { name: 'Pancham Sardar' })}
                         </a>
                     </div>
                 </div>
