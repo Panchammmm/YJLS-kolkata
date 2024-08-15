@@ -129,7 +129,7 @@ function CourseSection() {
     return (
         <section className="pt-[120px] pb-[110px]">
             <div>
-                <h1 className="text-2xl sm:text-3xl font-bold capitalize text-center mb-4">
+                <h1 className="text-2xl lg:text-4xl font-bold capitalize text-center mb-4">
                     Popular <span className="text-orange-500">Courses</span>
                 </h1>
                 <p className="text-center text-gray-500 mb-7 sm:mb-8 md:mb-10 px-4">
