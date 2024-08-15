@@ -5,6 +5,7 @@ import { FaArrowRight, FaHourglassEnd } from 'react-icons/fa';
 import N5 from "../../../assets/Courses/n5.jpg";
 import N4 from "../../../assets/Courses/n4.jpg";
 import N3 from "../../../assets/Courses/n3.jpg";
+
 const courses = [
     {
         image: N5,
@@ -35,7 +36,7 @@ const courses = [
         price: 12000,
         originalPrice: 18000,
         discount: 33
-    }    
+    }
 ];
 
 function CourseCard({ course }) {
@@ -47,7 +48,7 @@ function CourseCard({ course }) {
     };
 
     return (
-        <div className="relative flex w-80 flex-col rounded-xl bg-white text-gray-700 shadow-xl">
+        <div className="relative flex flex-col rounded-xl bg-white text-gray-700 shadow-xl w-full sm:w-80 mx-auto my-4 sm:my-0">
             <div className="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl">
                 <img src={course.image} alt={course.title} className="w-full h-full object-cover" />
             </div>
@@ -107,7 +108,7 @@ function CourseCard({ course }) {
 
                 <button
                     type="button"
-                    className="select-none rounded-lg bg-orange-500 py-3 px-6 text-center font-bold text-white shadow-md transition-all hover:shadow-lg hover:shadow-yellow-500/40 focus:opacity-85 active:opacity-85 disabled:pointer-events-none disabled:opacity-50"
+                    className="select-none rounded-lg bg-orange-500 py-3 mb-1 lg:mb-0 px-6 text-center font-bold text-white shadow-md transition-all hover:shadow-lg hover:shadow-yellow-500/40 focus:opacity-85 active:opacity-85 disabled:pointer-events-none disabled:opacity-50"
                     onClick={handleContactClick}
                 >
                     Contact Now
@@ -128,20 +129,22 @@ function CourseSection() {
     return (
         <section className="pt-[120px] pb-[110px]">
             <div>
-                <h1 className="text-3xl font-bold text-center mb-4 capitalize">Popular <span className="text-orange-500">Courses</span></h1>
-                <p className="text-center text-gray-600 mb-8">
+                <h1 className="text-2xl sm:text-3xl font-bold capitalize text-center mb-4">
+                    Popular <span className="text-orange-500">Courses</span>
+                </h1>
+                <p className="text-center text-gray-500 mb-7 sm:mb-8 md:mb-10 px-4">
                     Discover top courses at Yume Japanese Language School, featuring expert faculty and resources.
                 </p>
             </div>
-            <div className="flex flex-wrap justify-center align-middle mt-[4rem]">
+            <div className="flex flex-wrap justify-center mt-16 gap-8 lg:gap-0">
                 {courses.map((course, index) => (
-                    <div key={index} className="px-4">
+                    <div key={index} className="px-6 w-full sm:w-auto">
                         <CourseCard course={course} />
                     </div>
                 ))}
             </div>
 
-            <div className="flex justify-center mt-[7rem]">
+            <div className="flex justify-center mt-28">
                 <button
                     className="group hover:brightness-110 font-bold py-3 px-6 rounded-xl bg-gradient-to-r from-orange-300 to-orange-600 text-white flex items-center justify-center transition-all duration-300"
                     onClick={handleCourseClick}
