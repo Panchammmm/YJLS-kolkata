@@ -99,11 +99,11 @@ const PhotoGallery = () => {
   const currentImages = images[activeCategory].slice(0, visibleCount);
 
   return (
-    <div className="bg-gray-100 px-4 md:px-8 py-24 lg:py-32">
+    <div className="bg-gray-100 py-24 lg:py-32">
       <h2 className="text-2xl lg:text-4xl font-bold text-center mb-4">
         {t('Photo Gallery')}
       </h2>
-      <p className="text-center text-gray-600 mb-8">
+      <p className="text-center text-gray-600 mb-8 px-4">
         {t('Explore our diverse gallery across various categories.')}
       </p>
 
@@ -124,7 +124,7 @@ const PhotoGallery = () => {
 
       {/* Gallery Grid with Transition */}
       <div
-        className={`grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 place-items-center
+        className={`mx-4 lg:mx-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 place-items-center
           transition-opacity duration-300 ease-in-out ${isTransitioning ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0'}`}
       >
         {currentImages.map((image, index) => (

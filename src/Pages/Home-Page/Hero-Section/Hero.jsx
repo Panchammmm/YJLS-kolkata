@@ -3,7 +3,8 @@ import { FaUsers, FaBook, FaChalkboardTeacher, FaGraduationCap } from 'react-ico
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import "./hero.css";
-import landing from "../../../assets/landing-image.png";
+// import landing from "../../../assets/landing-image.png";
+import landing from "../../../assets/landing-image1.jpg";
 
 function Hero() {
     const navigate = useNavigate();
@@ -30,18 +31,18 @@ function Hero() {
                     className="w-full h-full object-cover blur-[0.7px]"
                 />
 
-                <div className="absolute inset-0 bg-black opacity-60 z-10"></div> {/* dark overlay */}
+                <div className="absolute inset-0 bg-black opacity-70 z-10"></div> {/* dark overlay */}
 
                 {/* Hero content */}
-                <div className="absolute px-4 sm:px-10 lg:pl-20 lg:pr-[45vw] top-[25%] left-0 z-20">
-                    <h1 className="text-white font-bold text-3xl sm:text-4xl lg:text-[3.8rem] leading-tight sm:leading-snug lg:leading-[4.5rem]">
-                        {t('Take The')} <span className="text-orange-400">{t('Best')}</span> JLPT <br /><span className="text-orange-400">{t('Courses')}</span> {t('in Kolkata, Online & Offline')}
+                <div className="absolute inset-0 flex flex-col justify-center px-4 sm:px-10 lg:pl-20 md:pr-[40vw] z-20">
+                    <h1 className="text-white font-bold text-3xl md:text-4xl lg:text-[3.8rem] leading-tight sm:leading-snug lg:leading-[4.5rem]">
+                        {t('Take The')} <span className="text-orange-400">{t('Best')}</span> JLPT <span className="text-orange-400">{t('Courses')}</span> {t('in Kolkata, Online & Offline')}
                     </h1>
-                    <p className="text-white pt-4 text-base lg:text-lg leading-relaxed sm:leading-normal lg:leading-[1.8]">
+                    <p className="text-white pt-4 pr-5 text-base lg:text-lg leading-relaxed sm:leading-normal lg:leading-[1.8]">
                         {t('H-des')}
                     </p>
 
-                    <div className="flex flex-col sm:flex-row items-start sm:items-center mt-6 space-y-4 sm:space-y-0 sm:space-x-4">
+                    <div className="flex flex-col sm:flex-row items-start sm:items-center mt-7 space-y-4 sm:space-y-0 sm:space-x-4">
                         <button className="read-button shadow-xl" onClick={handleReadMoreClick}>{t('Read More')}</button>
 
                         <button className="btn-con shadow-xl" onClick={handleContactNowClick}>

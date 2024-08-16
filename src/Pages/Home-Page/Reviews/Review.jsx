@@ -44,7 +44,42 @@ function Review() {
             stars: 5,
             disc: t("testimonials.Mahak Mala Saren Disc")
         },
-        // Add other testimonials here
+        {
+            name: t("testimonials.Aitijhya Saha"),
+            img_url: "https://lh3.googleusercontent.com/a/ACg8ocKBlaqwERhErR29RQwiJL-piMa6yN8m2mj70T7ofAfuBSGExw=w75-h75-p-rp-mo-ba2-br100",
+            stars: 5,
+            disc: t("testimonials.Aitijhya Saha Disc")
+        },
+        {
+            name: t("testimonials.Ramyani Das"),
+            img_url: "https://lh3.googleusercontent.com/a-/ALV-UjVrOI7sLN59Ik8AKyVT5b94Wzz6HFRuYrFW1T33LaVquPVXw56a=w75-h75-p-rp-mo-br100",
+            stars: 5,
+            disc: t("testimonials.Ramyani Das Disc")
+        },
+        {
+            name: t("testimonials.Srayashi Ghosh"),
+            img_url: "https://lh3.googleusercontent.com/a-/ALV-UjU7ISGxKX472GwGcW89YD41VYBnrxMIUizsktnaK7yY67t-_UI=w75-h75-p-rp-mo-br100",
+            stars: 5,
+            disc: t("testimonials.Srayashi Ghosh Disc")
+        },
+        {
+            name: t("testimonials.Anju Maheshwari Sarkhel"),
+            img_url: "https://lh3.googleusercontent.com/a-/ALV-UjVWvLIW54AN6Mo74iu_xImJEZtl5jcu6A-FJCCb_9LlcVqzR1M=w75-h75-p-rp-mo-br100",
+            stars: 5,
+            disc: t("testimonials.Anju Maheshwari Sarkhel Disc")
+        },
+        {
+            name: t("testimonials.Bikram Mistry"),
+            img_url: "https://lh3.googleusercontent.com/a/ACg8ocJYF5FZCnKpo5GMRlrTZZTRholUQX3EI3x_EpmQVxgyHppHvA=w75-h75-p-rp-mo-br100",
+            stars: 5,
+            disc: t("testimonials.Bikram Mistry Disc")
+        },
+        {
+            name: t("testimonials.Mousumi Sarkar"),
+            img_url: "https://lh3.googleusercontent.com/a-/ALV-UjXXIT5mSQMPLmBCGVn-xQilDZYb_yV3OqzJ0rpgs6hN1WXeuqiLRA=w75-h75-p-rp-mo-br100",
+            stars: 5,
+            disc: t("testimonials.Mousumi Sarkar Disc")
+        },
     ];
 
     const settings = {

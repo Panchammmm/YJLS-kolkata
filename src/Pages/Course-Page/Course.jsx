@@ -196,7 +196,7 @@ const CourseList = () => {
                 className={`flex justify-center mx-4 transition-opacity duration-300 ease-in-out ${isTransitioning ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0'
                     }`}
             >
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 place-items-center">
+                <div className="flex flex-row flex-wrap gap-4 place-items-center justify-center">
                     {currentCourses.map((course, index) => (
                         <div key={index} className="relative mt-8 flex w-full sm:w-72 lg:w-80 flex-col rounded-xl bg-white text-gray-700 shadow-xl">
                             <div className="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl">
@@ -242,7 +242,7 @@ const CourseList = () => {
                                     <span className="text-sm ml-3">{course.rating}</span>
                                 </div>
 
-                                <p className="flex mt-2 text-base font-light leading-relaxed text-gray-700 line-clamp-3">
+                                <p className="flex mt-2 h-[100px] text-base font-light leading-relaxed text-gray-700">
                                     {t(course.description)}
                                 </p>
 

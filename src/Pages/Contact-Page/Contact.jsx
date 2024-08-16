@@ -60,12 +60,12 @@ const ContactForm = () => {
             <h1 className="text-2xl md:text-3xl font-bold capitalize text-center mb-4">
                 {t('Send_your')} <span className="text-orange-500">{t('Enquiries')}</span>
             </h1>
-            <p className="text-center text-gray-500 mb-10 px-4">
+            <p className="text-center text-gray-500 mb-12 px-4">
                 {t('contact.subtitle')}
             </p>
 
             <div className="flex flex-col lg:flex-row justify-center gap-14 px-4 lg:px-0">
-                <div className="w-full h-full lg:w-[40%] my-auto bg-white shadow-lg rounded-lg p-8 lg:pt-10">
+                <div className="w-full h-full lg:w-[40%] bg-white shadow-lg rounded-lg p-8 lg:pt-10">
                     <form onSubmit={handleSubmit(handleFormSubmit)} className="space-y-5 lg:space-y-10">
                         <div className="flex items-center border-b border-gray-300 pb-2">
                             <FaUser className="text-gray-400 mr-3" />
