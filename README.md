@@ -2,11 +2,16 @@
 
 Welcome to Yume Japanese Language School Academy Site! We are thrilled to introduce you to our platform dedicated to providing high-quality Japanese language education.
 
+## Preview
+
+Take a sneak peek at our platform:
+
+![Preview](yjls-updated.png)
+
 ## Table of Contents
 
 - [Features](#features)
 - [Demo](#demo)
-- [Preview](#preview)
 - [Technologies Used](#technologies-used)
 - [NPMs Used](#npms-used)
 - [Yume Japanese Language School Details](#yume-japanese-language-school-details)
@@ -23,12 +28,6 @@ Our platform boasts the following features:
 ## Demo
 
 Curious to see our platform in action? Explore the live demo [here](https://yjls-kolkata.com/)!
-
-## Preview
-
-Take a sneak peek at our platform:
-
-![Preview](yjls-updated.png)
 
 ## Technologies Used
 
