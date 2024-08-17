@@ -1,8 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { FaFacebookF, FaWhatsapp, FaInstagram, FaFacebookMessenger } from 'react-icons/fa';
-import siteLogo from "../assets/site-logo-new.png";
-import backgroundImage from "../assets/world-map.png";
 
 const Footer = () => {
     const { t } = useTranslation();
@@ -12,7 +10,7 @@ const Footer = () => {
         <footer
             className="bg-[#171c28] text-gray-400 pt-12 pb-6"
             style={{
-                backgroundImage: `url(${backgroundImage})`,
+                backgroundImage: `url("https://github.com/Panchammmm/YJLS-kolkata/blob/main/src/assets/world-map.png?raw=true")`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat'
@@ -22,7 +20,7 @@ const Footer = () => {
                 {/* Logo and Title */}
                 <div className="mb-6">
                     <img
-                        src={siteLogo}
+                        src="https://github.com/Panchammmm/YJLS-kolkata/blob/main/src/assets/site-logo-new.png?raw=true"
                         alt="logo"
                         className="rounded-full mx-auto w-20 h-20 sm:w-24 sm:h-24 lg:w-24 lg:h-24 mb-4 border-[3.2px] border-gray-600"
                     />

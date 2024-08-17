@@ -14,7 +14,7 @@ export default function About() {
     return (
         <section>
             <div className="bg-black">
-                <img src={aboutbg} alt="aboutus" className="object-cover w-full h-[200px] sm:h-[400px] lg:h-[350px]" />
+                <img src="https://github.com/Panchammmm/YJLS-kolkata/blob/main/src/assets/page-banner/about.png?raw=true" alt="aboutus" className="object-cover w-full h-[200px] sm:h-[400px] lg:h-[350px]" />
             </div>
 
             <Info />
@@ -36,6 +36,9 @@ function Info() {
 
             <div className="lg:w-[60%] flex mx-auto md:gap-[10px] md:px-4 px-8">
                 <div className="image-card shadow-2xl">
+                    <img src={F4} alt="founder" className="w-full h-auto object-cover rounded-lg" />
+                </div>
+                <div className="image-card shadow-2xl">
                     <img src={F1} alt="founder" className="w-full h-auto object-cover rounded-lg" />
                 </div>
                 <div className="image-card shadow-2xl">
@@ -44,18 +47,17 @@ function Info() {
                 <div className="image-card shadow-2xl">
                     <img src={F3} alt="founder" className="w-full h-auto object-cover rounded-lg" />
                 </div>
-                <div className="image-card shadow-2xl">
-                    <img src={F4} alt="founder" className="w-full h-auto object-cover rounded-lg" />
-                </div>
             </div>
 
             {/* About section */}
-            <p className="md:text-xl text-lg text-stone-700 w-[90%] md:w-[70%] mx-auto text-center mt-12 px-4">
+            <p className="md:text-xl text-lg text-stone-700 w-[90%] md:w-[70%] mx-auto text-center mt-12 px-4 md:px-[5vw]">
                 {t('about.intro')}
                 <br /><br />
                 {t('about.approach')}
                 <br /><br />
                 {t('about.community')}
+                <br /><br />
+                {t('about.passion')}
             </p>
         </div>
     )

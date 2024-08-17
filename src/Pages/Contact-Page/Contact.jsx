@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { FaUser, FaEnvelope, FaPaperPlane, FaPhone, FaWhatsapp, FaMapMarkerAlt } from "react-icons/fa";
 import { useForm } from 'react-hook-form';
 import useWeb3Forms from "@web3forms/react";
-import contactbg from "../../assets/page-banner/contact.png";
 import { useTranslation } from 'react-i18next';
 
 export default function Contact() {
@@ -11,7 +10,7 @@ export default function Contact() {
     return (
         <section>
             <div className="bg-black">
-                <img src={contactbg} alt={t('contact.alt_image')} className="object-cover w-full h-[200px] sm:h-[400px] lg:h-[350px]" />
+                <img src="https://github.com/Panchammmm/YJLS-kolkata/blob/main/src/assets/page-banner/contact.png?raw=true" alt={t('contact.alt_image')} className="object-cover w-full h-[200px] sm:h-[400px] lg:h-[350px]" />
             </div>
             <ContactForm />
         </section>

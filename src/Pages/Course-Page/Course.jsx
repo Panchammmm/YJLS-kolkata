@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FaHourglassEnd } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
-import coursebg from "../../assets/page-banner/courses.png";
 
 import MasterN3 from "../../assets/Courses/n3.jpg";
 import CrashN3 from "../../assets/Courses/crash-n3.jpg";
@@ -22,7 +21,7 @@ export default function Course() {
     return (
         <div>
             <div className="bg-black">
-                <img src={coursebg} alt="course" className="object-cover w-full h-[200px] sm:h-[400px] lg:h-[350px]"></img>
+                <img src="https://github.com/Panchammmm/YJLS-kolkata/blob/main/src/assets/page-banner/courses.png?raw=true" alt="course" className="object-cover w-full h-[200px] sm:h-[400px] lg:h-[350px]"></img>
             </div>
 
             <CourseList />

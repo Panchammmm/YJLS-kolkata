@@ -1,64 +1,36 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
-// Photography 
-import Photo1 from "../../../assets/galary/photo1.jpg";
-import Photo2 from "../../../assets/galary/photo2.jpg";
-import Photo3 from "../../../assets/galary/photo3.jpg";
-import Photo4 from "../../../assets/galary/photo4.jpg";
-// import Photo5 from "../../../assets/galary/photo5.jpg";
-import Photo6 from "../../../assets/galary/photo6.jpg";
-import Photo7 from "../../../assets/galary/photo7.jpg";
-import Photo8 from "../../../assets/galary/photo8.jpg";
-import Photo9 from "../../../assets/galary/photo9.jpg";
-import Photo10 from "../../../assets/galary/photo10.jpg";
-
-// Students
-import Student1 from "../../../assets/galary/student1.jpg";
-import Student2 from "../../../assets/galary/student2.jpg";
-import Student3 from "../../../assets/galary/student3.jpg";
-import Student4 from "../../../assets/galary/student4.jpg";
-import Student5 from "../../../assets/galary/student5.jpg";
-import Student6 from "../../../assets/galary/student6.jpg";
-
-// Class
-import Class1 from "../../../assets/galary/class1.jpg";
-import Class2 from "../../../assets/galary/class2.jpg";
-import Class3 from "../../../assets/galary/class3.jpg";
-import Class4 from "../../../assets/galary/class4.jpg";
-import Class5 from "../../../assets/galary/class5.jpg";
-import Class6 from "../../../assets/galary/class6.jpg";
-
 // Define images for each category
 const Photography = [
-  Photo1,
-  Photo2,
-  Photo3,
-  Photo4,
-  // Photo5,
-  Photo6,
-  Photo7,
-  Photo8,
-  Photo9,
-  Photo10,
+  "https://github.com/Panchammmm/YJLS-kolkata/blob/main/src/assets/galary/photo1.jpg?raw=true",
+  "https://github.com/Panchammmm/YJLS-kolkata/blob/main/src/assets/galary/photo2.jpg?raw=true",
+  "https://github.com/Panchammmm/YJLS-kolkata/blob/main/src/assets/galary/photo3.jpg?raw=true",
+  "https://github.com/Panchammmm/YJLS-kolkata/blob/main/src/assets/galary/photo4.jpg?raw=true",
+  "https://github.com/Panchammmm/YJLS-kolkata/blob/main/src/assets/galary/photo5.jpg?raw=true",
+  "https://github.com/Panchammmm/YJLS-kolkata/blob/main/src/assets/galary/photo6.jpg?raw=true",
+  "https://github.com/Panchammmm/YJLS-kolkata/blob/main/src/assets/galary/photo7.jpg?raw=true",
+  "https://github.com/Panchammmm/YJLS-kolkata/blob/main/src/assets/galary/photo8.jpg?raw=true",
+  "https://github.com/Panchammmm/YJLS-kolkata/blob/main/src/assets/galary/photo9.jpg?raw=true",
+  "https://github.com/Panchammmm/YJLS-kolkata/blob/main/src/assets/galary/photo10.jpg?raw=true",
 ];
 
 const Students = [
-  Student1,
-  Student2,
-  Student3,
-  Student4,
-  Student5,
-  Student6,
+  "https://github.com/Panchammmm/YJLS-kolkata/blob/main/src/assets/galary/student1.jpg?raw=true",
+  "https://github.com/Panchammmm/YJLS-kolkata/blob/main/src/assets/galary/student2.jpg?raw=true",
+  "https://github.com/Panchammmm/YJLS-kolkata/blob/main/src/assets/galary/student3.jpg?raw=true",
+  "https://github.com/Panchammmm/YJLS-kolkata/blob/main/src/assets/galary/student4.jpg?raw=true",
+  "https://github.com/Panchammmm/YJLS-kolkata/blob/main/src/assets/galary/student5.jpg?raw=true",
+  "https://github.com/Panchammmm/YJLS-kolkata/blob/main/src/assets/galary/student6.jpg?raw=true",
 ];
 
 const Class = [
-  Class1,
-  Class2,
-  Class3,
-  Class4,
-  Class5,
-  Class6,
+  "https://github.com/Panchammmm/YJLS-kolkata/blob/main/src/assets/galary/class1.jpg?raw=true",
+  "https://github.com/Panchammmm/YJLS-kolkata/blob/main/src/assets/galary/class2.jpg?raw=true",
+  "https://github.com/Panchammmm/YJLS-kolkata/blob/main/src/assets/galary/class3.jpg?raw=true",
+  "https://github.com/Panchammmm/YJLS-kolkata/blob/main/src/assets/galary/class4.jpg?raw=true",
+  "https://github.com/Panchammmm/YJLS-kolkata/blob/main/src/assets/galary/class5.jpg?raw=true",
+  "https://github.com/Panchammmm/YJLS-kolkata/blob/main/src/assets/galary/class6.jpg?raw=true",
 ];
 
 // Combine categories for the 'All' category

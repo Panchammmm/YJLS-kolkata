@@ -3,8 +3,7 @@ import { FaUsers, FaBook, FaChalkboardTeacher, FaGraduationCap } from 'react-ico
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import "./hero.css";
-// import landing from "../../../assets/landing-image.png";
-import landing from "../../../assets/landing-image1.jpg";
+import landing from "../../../assets/landing-image3.png";
 
 function Hero() {
     const navigate = useNavigate();
@@ -31,12 +30,12 @@ function Hero() {
                     className="w-full h-full object-cover blur-[0.7px]"
                 />
 
-                <div className="absolute inset-0 bg-black opacity-70 z-10"></div> {/* dark overlay */}
+                <div className="absolute inset-0 bg-black opacity-55 z-10"></div> {/* dark overlay */}
 
                 {/* Hero content */}
                 <div className="absolute inset-0 flex flex-col justify-center px-4 sm:px-10 lg:pl-20 md:pr-[40vw] z-20">
                     <h1 className="text-white font-bold text-3xl md:text-4xl lg:text-[3.8rem] leading-tight sm:leading-snug lg:leading-[4.5rem]">
-                        {t('Take The')} <span className="text-orange-400">{t('Best')}</span> JLPT <span className="text-orange-400">{t('Courses')}</span> {t('in Kolkata, Online & Offline')}
+                        {t('Take The')} <span className="text-orange-400">{t('Best')}</span> {t('jap')} <span className="text-orange-400">{t('Courses')}</span> {t('in Kolkata, Online & Offline')}
                     </h1>
                     <p className="text-white pt-4 pr-5 text-base lg:text-lg leading-relaxed sm:leading-normal lg:leading-[1.8]">
                         {t('H-des')}

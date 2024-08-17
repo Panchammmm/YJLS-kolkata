@@ -2,11 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import './nav.css';
-import logo from "../assets/site-logo-new.png";
 
 const menuItems = [
     { name: 'Home', href: '/' },
-    { name: 'About Us', href: '/About' },
+    { name: 'About', href: '/About' },
     { name: 'Courses', href: '/Course' },
     { name: 'Contact', href: '/Contact' },
 ];
@@ -82,7 +81,7 @@ export default function Nav() {
             <div className="mx-auto flex items-center justify-between py-2">
                 <div className="inline-flex items-center space-x-2">
                     <div className="flex justify-center my-auto">
-                        <img src={logo} alt="nav-logo" className="rounded-3xl lg:size-11 size-10 brightness-[120%] border-2 border-orange-700" />
+                        <img src="https://github.com/Panchammmm/YJLS-kolkata/blob/main/src/assets/site-logo-new.png?raw=true" alt="nav-logo" className="rounded-3xl lg:size-11 size-10 brightness-[120%] border-2 border-orange-700" />
                         <div className="flex flex-col my-auto text-start text-white ml-3">
                             <h1 className="tracking-wider font-semibold lg:text-base text-[15px]">YJLS</h1>
                             <p className="lg:text-xs text-[10px] tracking-wider ml-[1px]">{t('Yume')}</p>
