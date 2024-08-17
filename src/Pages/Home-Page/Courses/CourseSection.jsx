@@ -3,13 +3,9 @@ import { useNavigate } from 'react-router-dom';
 import { FaArrowRight, FaHourglassEnd } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
 
-import N5 from "../../../assets/Courses/n5.jpg";
-import N4 from "../../../assets/Courses/n4.jpg";
-import N3 from "../../../assets/Courses/n3.jpg";
-
 const courses = [
     {
-        image: N5,
+        image: "https://github.com/Panchammmm/YJLS-kolkata/blob/main/src/assets/Courses/n5.jpg?raw=true",
         title: 'JLPT N5',
         duration: '6 Months',
         rating: '4.5',
@@ -19,7 +15,7 @@ const courses = [
         discount: 33
     },
     {
-        image: N4,
+        image: "https://github.com/Panchammmm/YJLS-kolkata/blob/main/src/assets/Courses/n4.jpg?raw=true",
         title: 'JLPT N4',
         duration: '6 Months',
         rating: '4.8',
@@ -29,7 +25,7 @@ const courses = [
         discount: 25
     },
     {
-        image: N3,
+        image: "https://github.com/Panchammmm/YJLS-kolkata/blob/main/src/assets/Courses/n3.jpg?raw=true",
         title: 'JLPT N3',
         duration: '6 Months',
         rating: '4.7',
@@ -102,10 +98,10 @@ function CourseCard({ course }) {
 
                 <div className="grid mt-4 mb-4 ml-1">
                     <div className="leading-4 ml-2 text-sm font-medium text-gray-400">
-                        <span className="line-through mr-4">{t(course.originalPrice)} /-</span>
+                        <span className="line-through mr-4">INR {t(course.originalPrice)} /-</span>
                     </div>
                     <div className="flex items-center">
-                        <span className="text-orange-600 text-lg font-semibold">{t(course.price)} /-</span>
+                        <span className="text-orange-600 text-lg font-semibold">INR {t(course.price)} /-</span>
                         <span className="bg-yellow-200 text-yellow-800 text-sm px-2 py-1 ml-3 rounded-full">
                             {t(course.discount)}% {t('Off')}
                         </span>

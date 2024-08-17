@@ -4,8 +4,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useTranslation } from "react-i18next";
 
-import back2 from "../../../assets/testimonBg.jpg";
-
 function SampleNextArrow(props) {
     const { className, style, onClick } = props;
     return (
@@ -115,7 +113,7 @@ function Review() {
         <div className="relative mb-[3px]">
             <div
                 className="bg-cover bg-center bg-no-repeat py-[120px] relative"
-                style={{ backgroundImage: `url(${back2})` }}
+                style={{ backgroundImage: `url("https://github.com/Panchammmm/YJLS-kolkata/blob/main/src/assets/testimonBg.jpg?raw=true")` }}
             >
                 <div className="absolute inset-0 bg-black opacity-[0.78] z-10"></div> {/* dark overlay */}
                 <div className="container mx-auto relative z-20">

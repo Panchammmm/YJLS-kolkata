@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 
 // Define images for each category
@@ -51,13 +51,24 @@ const PhotoGallery = () => {
   const [visibleCount, setVisibleCount] = useState(8); // Initial number of images to display
   const [isTransitioning, setIsTransitioning] = useState(false);
 
+  // Preload images on component mount
+  useEffect(() => {
+    const preloadImages = () => {
+      Object.values(images).flat().forEach((image) => {
+        const img = new Image();
+        img.src = image;
+      });
+    };
+    preloadImages();
+  }, []);
+
   const handleCategoryChange = (category) => {
     setIsTransitioning(true);
     setTimeout(() => {
       setActiveCategory(category);
       setVisibleCount(8); // Reset visible count when category changes
       setIsTransitioning(false);
-    }, 300); // Adjust timing to match transition duration
+    }, 150); // Adjusted timing to match reduced transition duration
   };
 
   const handleSeeMore = () => {
@@ -97,13 +108,14 @@ const PhotoGallery = () => {
       {/* Gallery Grid with Transition */}
       <div
         className={`mx-4 lg:mx-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 place-items-center
-          transition-opacity duration-300 ease-in-out ${isTransitioning ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0'}`}
+          transition-opacity duration-150 ease-in-out ${isTransitioning ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0'}`}
       >
         {currentImages.map((image, index) => (
           <div key={index} className="w-full h-[150px] sm:h-[180px] md:h-[200px] overflow-hidden rounded-lg shadow-lg">
             <img
               src={image}
               alt={`Gallery Image ${index + 1}`}
+              loading="lazy"
               className="object-cover w-full h-full"
             />
           </div>

@@ -1,7 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { FaPassport, FaBriefcase, FaUserGraduate, FaUniversity, FaLanguage, FaUserTie } from 'react-icons/fa';
-import pro from "../../../assets/program.png";
 
 const Program = () => {
     const { t } = useTranslation();
@@ -24,7 +23,7 @@ const Program = () => {
             <div className="flex flex-wrap items-center justify-center px-4 lg:px-20">
                 {/* Image Section */}
                 <div className="w-full lg:w-auto lg:scale-[1.5] lg:pr-10 lg:-translate-y-10 mb-16 lg:mb-0">
-                    <img src={pro} alt={t("Students")} className="h-[45vh] mx-auto lg:mx-0" />
+                    <img src="https://github.com/Panchammmm/YJLS-kolkata/blob/main/src/assets/program.png?raw=true" alt={t("Students")} className="h-[45vh] mx-auto lg:mx-0" />
                 </div>
 
                 {/* Text Section */}

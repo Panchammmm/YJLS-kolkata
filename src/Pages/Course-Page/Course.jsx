@@ -3,18 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import { FaHourglassEnd } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
 
-import MasterN3 from "../../assets/Courses/n3.jpg";
-import CrashN3 from "../../assets/Courses/crash-n3.jpg";
-import SpN3 from "../../assets/Courses/sp-n3.jpg";
-
-import MasterN4 from "../../assets/Courses/n4.jpg";
-import CrashN4 from "../../assets/Courses/crash-n4.jpg";
-import SpN4 from "../../assets/Courses/sp-n4.jpg";
-
-import MasterN5 from "../../assets/Courses/n5.jpg";
-import CrashN5 from "../../assets/Courses/crash-n5.jpg";
-import SpN5 from "../../assets/Courses/sp-n5.jpg";
-
 export default function Course() {
     const { t } = useTranslation();
 
@@ -31,40 +19,40 @@ export default function Course() {
 
 const N3Courses = [
     {
-        image: MasterN3,
+        image: "https://github.com/Panchammmm/YJLS-kolkata/blob/main/src/assets/Courses/n3.jpg?raw=true",
         name: 'course.N3.mastering',
         duration: 'course.duration.6_months',
         rating: 4.5,
         description: 'course.N3.mastering_description',
-        price: 6000,
-        originalPrice: 9000,
+        price: 12000,
+        originalPrice: 18000,
         discount: 33
     },
     {
-        image: CrashN3,
+        image: "https://github.com/Panchammmm/YJLS-kolkata/blob/main/src/assets/Courses/crash-n3.jpg?raw=true",
         name: 'course.N3.crash',
         duration: 'course.duration.3_months',
         rating: 4.6,
         description: 'course.N3.crash_description',
-        price: 999,
-        originalPrice: 1600,
+        price: 4500,
+        originalPrice: 6500,
         discount: 37
     },
     {
-        image: SpN3,
+        image: "https://github.com/Panchammmm/YJLS-kolkata/blob/main/src/assets/Courses/sp-n3.jpg?raw=true",
         name: 'course.N3.special',
         duration: 'course.duration.3_months',
         rating: 4.8,
         description: 'course.N3.special_description',
-        price: 999,
-        originalPrice: 1200,
-        discount: 16
+        price: 3900,
+        originalPrice: 5900,
+        discount: 35
     },
 ];
 
 const N4Courses = [
     {
-        image: MasterN4,
+        image: "https://github.com/Panchammmm/YJLS-kolkata/blob/main/src/assets/Courses/n4.jpg?raw=true",
         name: 'course.N4.mastering',
         duration: 'course.duration.6_months',
         rating: 4.8,
@@ -74,30 +62,30 @@ const N4Courses = [
         discount: 25
     },
     {
-        image: CrashN4,
+        image: "https://github.com/Panchammmm/YJLS-kolkata/blob/main/src/assets/Courses/crash-n4.jpg?raw=true",
         name: 'course.N4.crash',
         duration: 'course.duration.3_months',
         rating: 4.6,
         description: 'course.N4.crash_description',
-        price: 899,
-        originalPrice: 1400,
-        discount: 35
+        price: 3600,
+        originalPrice: 5600,
+        discount: 37
     },
     {
-        image: SpN4,
+        image: "https://github.com/Panchammmm/YJLS-kolkata/blob/main/src/assets/Courses/sp-n4.jpg?raw=true",
         name: 'course.N4.special',
         duration: 'course.duration.3_months',
         rating: 4.5,
         description: 'course.N4.special_description',
-        price: 999,
-        originalPrice: 1200,
-        discount: 16
+        price: 3900,
+        originalPrice: 5900,
+        discount: 36
     },
 ];
 
 const N5Courses = [
     {
-        image: MasterN5,
+        image: "https://github.com/Panchammmm/YJLS-kolkata/blob/main/src/assets/Courses/n5.jpg?raw=true",
         name: 'course.N5.mastering',
         duration: 'course.duration.6_months',
         rating: 4.7,
@@ -107,9 +95,9 @@ const N5Courses = [
         discount: 33
     },
     {
-        image: CrashN5,
+        image: "https://github.com/Panchammmm/YJLS-kolkata/blob/main/src/assets/Courses/crash-n5.jpg?raw=true",
         name: 'course.N5.crash',
-        duration: 'course.duration.3_months',
+        duration: 'course.duration.1_months',
         rating: 4.5,
         description: 'course.N5.crash_description',
         price: 799,
@@ -117,9 +105,9 @@ const N5Courses = [
         discount: 20
     },
     {
-        image: SpN5,
+        image: "https://github.com/Panchammmm/YJLS-kolkata/blob/main/src/assets/Courses/sp-n5.jpg?raw=true",
         name: 'course.N5.special',
-        duration: 'course.duration.3_months',
+        duration: 'course.duration.1_months',
         rating: 4.8,
         description: 'course.N5.special_description',
         price: 999,
@@ -247,10 +235,10 @@ const CourseList = () => {
 
                                 <div className="grid mt-4 mb-4 ml-1">
                                     <div className="leading-4 ml-2 text-sm font-medium text-gray-400">
-                                        <span className="line-through mr-4">{course.originalPrice} /-</span>
+                                        <span className="line-through mr-4">INR {course.originalPrice} /-</span>
                                     </div>
                                     <div className="flex items-center">
-                                        <span className="text-orange-600 text-lg font-semibold">{course.price} /-</span>
+                                        <span className="text-orange-600 text-lg font-semibold">INR {course.price} /-</span>
                                         <span className="bg-yellow-200 text-yellow-800 text-sm px-2 py-1 ml-3 rounded-full">{course.discount}% {t('Off')}</span>
                                     </div>
                                 </div>

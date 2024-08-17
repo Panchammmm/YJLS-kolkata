@@ -3,7 +3,6 @@ import { FaUsers, FaBook, FaChalkboardTeacher, FaGraduationCap } from 'react-ico
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import "./hero.css";
-import landing from "../../../assets/landing-image3.png";
 
 function Hero() {
     const navigate = useNavigate();
@@ -24,7 +23,7 @@ function Hero() {
             {/* Background image */}
             <div className="relative w-full h-[95vh] lg:h-[110vh] bg-black">
                 <img
-                    src={landing}
+                    src="https://github.com/Panchammmm/YJLS-kolkata/blob/main/src/assets/landing-image3.png?raw=true"
                     loading="lazy"
                     alt="landing"
                     className="w-full h-full object-cover blur-[0.7px]"

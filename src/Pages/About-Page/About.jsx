@@ -2,12 +2,6 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import "./abt.css";
 
-import aboutbg from "../../assets/page-banner/about.png";
-import F1 from "../../assets/Founder/f1.jpg";
-import F2 from "../../assets/Founder/f2.jpg";
-import F3 from "../../assets/Founder/f3.jpg";
-import F4 from "../../assets/Founder/f4.jpg";
-
 export default function About() {
     const { t } = useTranslation();
 
@@ -36,16 +30,16 @@ function Info() {
 
             <div className="lg:w-[60%] flex mx-auto md:gap-[10px] md:px-4 px-8">
                 <div className="image-card shadow-2xl">
-                    <img src={F4} alt="founder" className="w-full h-auto object-cover rounded-lg" />
+                    <img src="https://github.com/Panchammmm/YJLS-kolkata/blob/main/src/assets/Founder/f4.jpg?raw=true" alt="founder" className="w-full h-auto object-cover rounded-lg" />
                 </div>
                 <div className="image-card shadow-2xl">
-                    <img src={F1} alt="founder" className="w-full h-auto object-cover rounded-lg" />
+                    <img src="https://github.com/Panchammmm/YJLS-kolkata/blob/main/src/assets/Founder/f1.jpg?raw=true" alt="founder" className="w-full h-auto object-cover rounded-lg" />
                 </div>
                 <div className="image-card shadow-2xl">
-                    <img src={F2} alt="founder" className="w-full h-auto object-cover rounded-lg" />
+                    <img src="https://github.com/Panchammmm/YJLS-kolkata/blob/main/src/assets/Founder/f2.jpg?raw=true" alt="founder" className="w-full h-auto object-cover rounded-lg" />
                 </div>
                 <div className="image-card shadow-2xl">
-                    <img src={F3} alt="founder" className="w-full h-auto object-cover rounded-lg" />
+                    <img src="https://github.com/Panchammmm/YJLS-kolkata/blob/main/src/assets/Founder/f3.jpg?raw=true" alt="founder" className="w-full h-auto object-cover rounded-lg" />
                 </div>
             </div>
 
