@@ -21,7 +21,7 @@ function Hero() {
     return (
         <div>
             {/* Background image */}
-            <div className="relative w-full h-[95vh] lg:h-[110vh] bg-black">
+            <div className="relative w-full h-[100vh] lg:h-[110vh] bg-black">
                 <img
                     src="https://github.com/Panchammmm/YJLS-kolkata/blob/main/src/assets/landing-image3.png?raw=true"
                     loading="lazy"
@@ -36,13 +36,16 @@ function Hero() {
                     <h1 className="text-white font-bold text-3xl md:text-4xl lg:text-[3.8rem] leading-tight sm:leading-snug lg:leading-[4.5rem]">
                         {t('Take The')} <span className="text-orange-400">{t('Best')}</span> {t('jap')} <span className="text-orange-400">{t('Courses')}</span> {t('in Kolkata, Online & Offline')}
                     </h1>
-                    <p className="text-white pt-4 pr-5 text-base lg:text-lg leading-relaxed sm:leading-normal lg:leading-[1.8]">
+                    <p className="text-white pt-4 text-base lg:text-lg leading-relaxed sm:leading-normal lg:leading-[1.8]">
                         {t('H-des')}
                     </p>
 
                     <div className="flex flex-col sm:flex-row items-start sm:items-center mt-7 space-y-4 sm:space-y-0 sm:space-x-4">
+
+                        {/* read more button */}
                         <button className="read-button shadow-xl" onClick={handleReadMoreClick}>{t('Read More')}</button>
 
+                        {/* contact now button */}
                         <button className="btn-con shadow-xl" onClick={handleContactNowClick}>
                             {t('Contact Now')}
                             <div className="arrow-wrapper-con">

@@ -22,6 +22,7 @@ const Students = [
   "https://github.com/Panchammmm/YJLS-kolkata/blob/main/src/assets/galary/student4.jpg?raw=true",
   "https://github.com/Panchammmm/YJLS-kolkata/blob/main/src/assets/galary/student5.jpg?raw=true",
   "https://github.com/Panchammmm/YJLS-kolkata/blob/main/src/assets/galary/student6.jpg?raw=true",
+  "https://github.com/Panchammmm/YJLS-kolkata/blob/main/src/assets/galary/student7.jpg?raw=true",
 ];
 
 const Class = [

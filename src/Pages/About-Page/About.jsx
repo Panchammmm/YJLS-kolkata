@@ -2,6 +2,9 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import "./abt.css";
 
+import T1 from "../../assets/Founder/t1.jpg";
+import T2 from "../../assets/Founder/t2.jpg";
+
 export default function About() {
     const { t } = useTranslation();
 
@@ -21,6 +24,21 @@ function Info() {
 
     return (
         <div className="bg-gray-100 lg:pt-[100px] pt-20 pb-[120px] flex flex-col justify-center">
+            {/* teachers section */}
+            <h1 className="text-2xl md:text-3xl font-bold capitalize text-center mb-10">
+                {t('about.our')} <span className="text-orange-500">{t('about.teachers')}</span>
+            </h1>
+
+            <div className="lg:w-[60%] flex mx-auto justify-center md:gap-[10px] px-14 mb-20">
+                <div className="image-card shadow-2xl">
+                    <img src={T1} alt="founder" className="w-full h-auto object-cover rounded-lg" />
+                </div>
+                <div className="image-card shadow-2xl">
+                    <img src={T2} alt="founder" className="w-full h-auto object-cover rounded-lg" />
+                </div>
+            </div>
+
+            {/* founder section */}
             <h1 className="text-2xl md:text-3xl font-bold capitalize text-center mb-4">
                 {t('about.title')} <span className="text-orange-500">{t('about.founder')}</span>
             </h1>
@@ -28,7 +46,7 @@ function Info() {
                 {t('about.founderDescription')}
             </p>
 
-            <div className="lg:w-[60%] flex mx-auto md:gap-[10px] md:px-4 px-8">
+            <div className="lg:w-[60%] flex mx-auto md:gap-[10px] px-6">
                 <div className="image-card shadow-2xl">
                     <img src="https://github.com/Panchammmm/YJLS-kolkata/blob/main/src/assets/Founder/f4.jpg?raw=true" alt="founder" className="w-full h-auto object-cover rounded-lg" />
                 </div>
